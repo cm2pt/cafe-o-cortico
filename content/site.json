@@ -1,28 +1,37 @@
 {
   "name": "Café O Cortiço",
-  "tagline": "A calm coffee break in the heart of Torres Novas.",
-  "shortDescription": "A welcoming café for espresso, pastries, and relaxed conversation.",
-  "phone": "",
+  "tagline": {
+    "pt": "Uma pausa de café tranquila no coração de Torres Novas.",
+    "en": "A calm coffee break in the heart of Torres Novas."
+  },
+  "shortDescription": {
+    "pt": "Um café acolhedor para espresso, pastelaria e conversa descontraída.",
+    "en": "A welcoming café for espresso, pastries, and relaxed conversation."
+  },
+  "phone": "912 869 168",
   "email": "",
   "address": {
-    "line1": "Torres Novas",
-    "line2": "Portugal",
-    "line3": ""
+    "line1": "Avenida Dr. Sá Carneiro 3",
+    "line2": "2350-536 Torres Novas",
+    "line3": "Portugal"
   },
-  "googleMapsUrl": "https://share.google/V2SerdI6eGsBFIEXV",
+  "googleMapsUrl": "https://www.google.com/maps?q=Caf%C3%A9%20O%20Cortico%2C%20Avenida%20Dr.%20S%C3%A1%20Carneiro%203%2C%202350-536%20Torres%20Novas&output=embed",
   "instagramUrl": "https://www.instagram.com/cafeocortico/",
   "facebookUrl": "https://www.facebook.com/profile.php?id=100063552132251",
   "hours": {
     "timezone": "Europe/Lisbon",
-    "hoursNote": "Hours change seasonally. Check Instagram for the latest updates.",
+    "hoursNote": {
+      "pt": "Aberto todos os dias, 07:00–00:00.",
+      "en": "Open daily, 07:00–00:00."
+    },
     "weekSchedule": [
-      { "day": "Monday", "open": null, "close": null },
-      { "day": "Tuesday", "open": null, "close": null },
-      { "day": "Wednesday", "open": null, "close": null },
-      { "day": "Thursday", "open": null, "close": null },
-      { "day": "Friday", "open": null, "close": null },
-      { "day": "Saturday", "open": null, "close": null },
-      { "day": "Sunday", "open": null, "close": null }
+      { "day": "Monday", "open": "07:00", "close": "00:00" },
+      { "day": "Tuesday", "open": "07:00", "close": "00:00" },
+      { "day": "Wednesday", "open": "07:00", "close": "00:00" },
+      { "day": "Thursday", "open": "07:00", "close": "00:00" },
+      { "day": "Friday", "open": "07:00", "close": "00:00" },
+      { "day": "Saturday", "open": "07:00", "close": "00:00" },
+      { "day": "Sunday", "open": "07:00", "close": "00:00" }
     ]
   }
 }

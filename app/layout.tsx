@@ -1,18 +1,20 @@
 import type { Metadata } from "next";
+import { cookies } from "next/headers";
 import "./globals.css";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import { site } from "@/lib/data";
+import { resolveLang } from "@/lib/i18n";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://cafeocortico.local";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: `${site.name} | Torres Novas` ,
-  description: site.shortDescription,
+  title: `${site.name} | Torres Novas`,
+  description: site.shortDescription.pt,
   openGraph: {
     title: `${site.name} | Torres Novas`,
-    description: site.shortDescription,
+    description: site.shortDescription.pt,
     type: "website",
     images: [
       {
@@ -26,23 +28,25 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: `${site.name} | Torres Novas`,
-    description: site.shortDescription,
+    description: site.shortDescription.pt,
     images: ["/og.jpg"]
   }
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const lang = resolveLang((await cookies()).get("lang")?.value);
+
   return (
-    <html lang="pt">
+    <html lang={lang === "pt" ? "pt-PT" : "en"}>
       <body className="antialiased">
         <div className="min-h-screen">
-          <SiteHeader />
+          <SiteHeader lang={lang} />
           {children}
-          <SiteFooter />
+          <SiteFooter lang={lang} />
         </div>
       </body>
     </html>

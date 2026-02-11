@@ -1,50 +1,54 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { cookies } from "next/headers";
 import Container from "@/components/Container";
 import { gallery } from "@/lib/data";
+import { resolveLang, t, ui } from "@/lib/i18n";
 
 export const metadata: Metadata = {
   title: "Gallery | Café O Cortiço",
   description: "A look inside Café O Cortiço in Torres Novas."
 };
 
-export default function GalleryPage() {
+export default async function GalleryPage() {
+  const lang = resolveLang((await cookies()).get("lang")?.value);
+
   return (
     <main className="pb-20 pt-12">
       <Container>
         <div className="max-w-2xl">
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#8b7768]">
-            Gallery
+            {t(ui.nav.gallery, lang)}
           </p>
           <h1 className="mt-4 text-4xl font-semibold text-[#2d1d14]">
-            A calm corner in Torres Novas
+            {t(ui.labels.galleryTitle, lang)}
           </h1>
           <p className="mt-4 text-base text-[#6f5a4d]">
-            Placeholders today, real photography later.
+            {t(ui.labels.gallerySubtitle, lang)}
           </p>
         </div>
-        <div className="mt-10 grid gap-6 md:grid-cols-2">
-          {gallery.images.map((image) => (
+      </Container>
+
+      <div className="mt-10">
+        <div className="flex snap-x snap-mandatory gap-6 overflow-x-auto px-6 pb-6 pt-4">
+          {gallery.images.map((image, index) => (
             <figure
               key={image.src}
-              className="overflow-hidden rounded-3xl border border-[#e4d8cc] bg-white/90"
+              className="min-w-[260px] flex-1 snap-start overflow-hidden rounded-3xl border border-[#e4d8cc] bg-white/90 shadow-sm md:min-w-[360px]"
             >
-              <Image
-                src={image.src}
-                alt={image.alt}
-                width={960}
-                height={720}
-                className="h-full w-full object-cover"
-              />
-              {image.credit ? (
-                <figcaption className="px-4 py-2 text-xs text-[#8b7768]">
-                  {image.credit}
-                </figcaption>
-              ) : null}
+              <div className="relative h-72 w-full bg-[#f2e8de]">
+                <Image
+                  src={image.src}
+                  alt={t(image.alt, lang)}
+                  fill
+                  className="object-cover"
+                  priority={index < 2}
+                />
+              </div>
             </figure>
           ))}
         </div>
-      </Container>
+      </div>
     </main>
   );
 }

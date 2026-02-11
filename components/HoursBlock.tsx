@@ -1,14 +1,22 @@
 import { site } from "@/lib/data";
 import { formatHours, getOpenStatus } from "@/lib/time";
+import type { Lang } from "@/lib/i18n";
+import { t, ui } from "@/lib/i18n";
 
-export default function HoursBlock() {
+type HoursBlockProps = {
+  lang: Lang;
+};
+
+export default function HoursBlock({ lang }: HoursBlockProps) {
   const { weekSchedule, hoursNote, timezone } = site.hours;
-  const status = getOpenStatus(weekSchedule, timezone);
+  const status = getOpenStatus(weekSchedule, timezone, lang);
 
   return (
     <div className="rounded-3xl border border-[#e4d8cc] bg-white/90 p-6">
       <div className="flex items-center justify-between">
-        <h3 className="text-lg font-semibold text-[#2d1d14]">Hours</h3>
+        <h3 className="text-lg font-semibold text-[#2d1d14]">
+          {t(ui.labels.hours, lang)}
+        </h3>
         <span
           className={`rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] ${
             status.isOpen === true
@@ -27,7 +35,7 @@ export default function HoursBlock() {
             key={entry.day}
             className="flex items-center justify-between border-b border-[#efe2d5] pb-2 last:border-b-0"
           >
-            <span>{entry.day}</span>
+            <span>{t(ui.days[entry.day as keyof typeof ui.days] ?? entry.day, lang)}</span>
             <span className="font-semibold text-[#2d1d14]">
               {formatHours(entry)}
             </span>
@@ -35,7 +43,7 @@ export default function HoursBlock() {
         ))}
       </div>
       {status.isOpen === null ? (
-        <p className="mt-4 text-xs text-[#6f5a4d]">{hoursNote}</p>
+        <p className="mt-4 text-xs text-[#6f5a4d]">{t(hoursNote, lang)}</p>
       ) : null}
     </div>
   );

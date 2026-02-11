@@ -21,15 +21,15 @@ export const buildLocalBusinessSchema = (siteUrl: string) => {
     "@context": "https://schema.org",
     "@type": "CafeOrCoffeeShop",
     name: site.name,
-    description: site.shortDescription,
+    description: site.shortDescription.pt,
     url: siteUrl,
     telephone: site.phone || undefined,
     email: site.email || undefined,
     address: {
       "@type": "PostalAddress",
-      addressLocality: site.address.line1,
-      addressCountry: site.address.line2,
-      streetAddress: site.address.line3 || undefined
+      streetAddress: site.address.line1,
+      addressLocality: site.address.line2,
+      addressCountry: site.address.line3 || undefined
     },
     sameAs: [site.instagramUrl, site.facebookUrl],
     openingHoursSpecification:

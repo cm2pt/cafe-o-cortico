@@ -1,10 +1,84 @@
 {
   "images": [
-    { "src": "/gallery/01.jpg", "alt": "Coffee bar close-up", "credit": "" },
-    { "src": "/gallery/02.jpg", "alt": "Pastry counter", "credit": "" },
-    { "src": "/gallery/03.jpg", "alt": "Cozy seating", "credit": "" },
-    { "src": "/gallery/04.jpg", "alt": "Barista preparing espresso", "credit": "" },
-    { "src": "/gallery/05.jpg", "alt": "Warm light in the café", "credit": "" },
-    { "src": "/gallery/06.jpg", "alt": "Shared table", "credit": "" }
+    {
+      "src": "/gallery/gallery-01.jpg",
+      "alt": {
+        "pt": "Foto do Café O Cortiço 1",
+        "en": "Café O Cortiço photo 1"
+      },
+      "credit": ""
+    },
+    {
+      "src": "/gallery/gallery-02.jpg",
+      "alt": {
+        "pt": "Foto do Café O Cortiço 2",
+        "en": "Café O Cortiço photo 2"
+      },
+      "credit": ""
+    },
+    {
+      "src": "/gallery/gallery-03.jpg",
+      "alt": {
+        "pt": "Foto do Café O Cortiço 3",
+        "en": "Café O Cortiço photo 3"
+      },
+      "credit": ""
+    },
+    {
+      "src": "/gallery/gallery-04.jpg",
+      "alt": {
+        "pt": "Foto do Café O Cortiço 4",
+        "en": "Café O Cortiço photo 4"
+      },
+      "credit": ""
+    },
+    {
+      "src": "/gallery/gallery-05.jpg",
+      "alt": {
+        "pt": "Foto do Café O Cortiço 5",
+        "en": "Café O Cortiço photo 5"
+      },
+      "credit": ""
+    },
+    {
+      "src": "/gallery/gallery-06.jpg",
+      "alt": {
+        "pt": "Foto do Café O Cortiço 6",
+        "en": "Café O Cortiço photo 6"
+      },
+      "credit": ""
+    },
+    {
+      "src": "/gallery/gallery-07.jpg",
+      "alt": {
+        "pt": "Foto do Café O Cortiço 7",
+        "en": "Café O Cortiço photo 7"
+      },
+      "credit": ""
+    },
+    {
+      "src": "/gallery/gallery-08.jpg",
+      "alt": {
+        "pt": "Foto do Café O Cortiço 8",
+        "en": "Café O Cortiço photo 8"
+      },
+      "credit": ""
+    },
+    {
+      "src": "/gallery/gallery-09.jpg",
+      "alt": {
+        "pt": "Foto do Café O Cortiço 9",
+        "en": "Café O Cortiço photo 9"
+      },
+      "credit": ""
+    },
+    {
+      "src": "/gallery/gallery-10.jpg",
+      "alt": {
+        "pt": "Foto do Café O Cortiço 10",
+        "en": "Café O Cortiço photo 10"
+      },
+      "credit": ""
+    }
   ]
 }

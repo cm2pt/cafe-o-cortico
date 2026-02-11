@@ -1,6 +1,6 @@
 import type { HoursEntry } from "@/lib/types";
-
-const MINUTES_IN_DAY = 24 * 60;
+import type { Lang } from "@/lib/i18n";
+import { t, ui } from "@/lib/i18n";
 
 const parseTime = (value: string | null) => {
   if (!value) return null;
@@ -30,24 +30,25 @@ const getLisbonParts = (date: Date, timeZone: string) => {
 
 export const getOpenStatus = (
   weekSchedule: HoursEntry[],
-  timeZone: string
+  timeZone: string,
+  lang: Lang
 ) => {
   if (!weekSchedule.length) {
-    return { label: "Hours unavailable", isOpen: null };
+    return { label: t(ui.labels.hoursUnavailable, lang), isOpen: null };
   }
 
   const { weekday, minutes } = getLisbonParts(new Date(), timeZone);
   const today = weekSchedule.find((entry) => entry.day === weekday);
 
   if (!today) {
-    return { label: "Hours unavailable", isOpen: null };
+    return { label: t(ui.labels.hoursUnavailable, lang), isOpen: null };
   }
 
   const openMinutes = parseTime(today.open);
   const closeMinutes = parseTime(today.close);
 
   if (openMinutes === null || closeMinutes === null) {
-    return { label: "Hours unavailable", isOpen: null };
+    return { label: t(ui.labels.hoursUnavailable, lang), isOpen: null };
   }
 
   const isOvernight = openMinutes > closeMinutes;
@@ -55,7 +56,10 @@ export const getOpenStatus = (
     ? minutes >= openMinutes || minutes < closeMinutes
     : minutes >= openMinutes && minutes < closeMinutes;
 
-  return { label: isOpen ? "Open now" : "Closed now", isOpen };
+  return {
+    label: isOpen ? t(ui.labels.openNow, lang) : t(ui.labels.closedNow, lang),
+    isOpen
+  };
 };
 
 export const formatHours = (entry: HoursEntry) => {

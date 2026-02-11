@@ -1,75 +1,111 @@
 {
   "categories": [
     {
-      "title": "Espresso & Coffee",
-      "description": "Balanced espresso and milk-based classics.",
+      "title": { "pt": "Espresso & Café", "en": "Espresso & Coffee" },
+      "description": {
+        "pt": "Espresso equilibrado e clássicos com leite.",
+        "en": "Balanced espresso and milk-based classics."
+      },
       "image": "/menu/coffee.jpg",
       "items": [
         {
-          "name": "Espresso",
-          "description": "Short, rich, and aromatic.",
+          "name": { "pt": "Espresso", "en": "Espresso" },
+          "description": {
+            "pt": "Curto, rico e aromático.",
+            "en": "Short, rich, and aromatic."
+          },
           "price": null,
-          "badges": ["popular"]
+          "badges": [{ "pt": "popular", "en": "popular" }]
         },
         {
-          "name": "Cappuccino",
-          "description": "Silky milk foam with a bold base.",
+          "name": { "pt": "Cappuccino", "en": "Cappuccino" },
+          "description": {
+            "pt": "Espuma cremosa com base intensa.",
+            "en": "Silky foam with a bold base."
+          },
           "price": null,
           "badges": []
         },
         {
-          "name": "Latte",
-          "description": "Smooth and creamy, easy to linger with.",
+          "name": { "pt": "Latte", "en": "Latte" },
+          "description": {
+            "pt": "Suave e cremoso, para ficar a saborear.",
+            "en": "Smooth and creamy, made to linger." 
+          },
           "price": null,
           "badges": []
         }
       ]
     },
     {
-      "title": "Pastries & Sweets",
-      "description": "Baked daily, perfect with coffee.",
+      "title": { "pt": "Pastelaria & Doces", "en": "Pastries & Sweets" },
+      "description": {
+        "pt": "Feitos diariamente, perfeitos com café.",
+        "en": "Baked daily, perfect with coffee."
+      },
       "image": "/menu/pastries.jpg",
       "items": [
         {
-          "name": "Daily pastry",
-          "description": "Ask about today’s selection.",
+          "name": { "pt": "Pastelaria do dia", "en": "Daily pastry" },
+          "description": {
+            "pt": "Pergunte pela seleção de hoje.",
+            "en": "Ask about today’s selection."
+          },
           "price": null,
-          "badges": ["new"]
+          "badges": [{ "pt": "novo", "en": "new" }]
         },
         {
-          "name": "Cake slice",
-          "description": "Rotating flavors and textures.",
+          "name": { "pt": "Fatia de bolo", "en": "Cake slice" },
+          "description": {
+            "pt": "Sabores e texturas a rodar.",
+            "en": "Rotating flavors and textures."
+          },
           "price": null,
           "badges": []
         },
         {
-          "name": "Sweet bite",
-          "description": "Small, satisfying, and fresh.",
+          "name": { "pt": "Doce pequeno", "en": "Sweet bite" },
+          "description": {
+            "pt": "Pequeno, fresco e satisfatório.",
+            "en": "Small, satisfying, and fresh."
+          },
           "price": null,
           "badges": []
         }
       ]
     },
     {
-      "title": "Toasts & Light Bites",
-      "description": "Warm, simple, and made to order.",
+      "title": { "pt": "Tostas & Snacks", "en": "Toasts & Light Bites" },
+      "description": {
+        "pt": "Quentes, simples e feitos na hora.",
+        "en": "Warm, simple, and made to order."
+      },
       "image": "/menu/bites.jpg",
       "items": [
         {
-          "name": "Toasted sandwich",
-          "description": "Golden, crisp, and filling.",
+          "name": { "pt": "Sandes tostada", "en": "Toasted sandwich" },
+          "description": {
+            "pt": "Dourada, crocante e composta.",
+            "en": "Golden, crisp, and filling."
+          },
           "price": null,
           "badges": []
         },
         {
-          "name": "Soup of the day",
-          "description": "Comforting and seasonal.",
+          "name": { "pt": "Sopa do dia", "en": "Soup of the day" },
+          "description": {
+            "pt": "Confortável e sazonal.",
+            "en": "Comforting and seasonal."
+          },
           "price": null,
           "badges": []
         },
         {
-          "name": "Snack plate",
-          "description": "A light bite to share.",
+          "name": { "pt": "Snack para partilhar", "en": "Snack plate" },
+          "description": {
+            "pt": "Uma opção leve para dividir.",
+            "en": "A light bite to share."
+          },
           "price": null,
           "badges": []
         }

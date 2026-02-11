@@ -1,3 +1,5 @@
+import type { LocalizedString } from "@/lib/i18n";
+
 export type HoursEntry = {
   day: string;
   open: string | null;
@@ -6,8 +8,8 @@ export type HoursEntry = {
 
 export type SiteData = {
   name: string;
-  tagline: string;
-  shortDescription: string;
+  tagline: LocalizedString;
+  shortDescription: LocalizedString;
   phone: string;
   email: string;
   address: {
@@ -20,21 +22,21 @@ export type SiteData = {
   facebookUrl: string;
   hours: {
     timezone: string;
-    hoursNote: string;
+    hoursNote: LocalizedString;
     weekSchedule: HoursEntry[];
   };
 };
 
 export type MenuItem = {
-  name: string;
-  description: string;
+  name: LocalizedString;
+  description: LocalizedString;
   price: string | null;
-  badges?: string[];
+  badges?: LocalizedString[];
 };
 
 export type MenuCategory = {
-  title: string;
-  description?: string;
+  title: LocalizedString;
+  description?: LocalizedString;
   image?: string;
   items: MenuItem[];
 };
@@ -44,14 +46,14 @@ export type MenuData = {
 };
 
 export type PromoStripItem = {
-  label: string;
-  text: string;
+  label: LocalizedString;
+  text: LocalizedString;
 };
 
 export type FeaturedItem = {
-  name: string;
-  description: string;
-  badge?: string;
+  name: LocalizedString;
+  description: LocalizedString;
+  badge?: LocalizedString;
   image: string;
 };
 
@@ -59,17 +61,17 @@ export type PromosData = {
   promoStrip: PromoStripItem[];
   featuredItems: FeaturedItem[];
   happyHour: {
-    title: string;
-    description: string;
-    hoursNote: string;
-    ctaLabel: string;
+    title: LocalizedString;
+    description: LocalizedString;
+    hoursNote: LocalizedString;
+    ctaLabel: LocalizedString;
   };
-  seasonalNote: string;
+  seasonalNote: LocalizedString;
 };
 
 export type GalleryImage = {
   src: string;
-  alt: string;
+  alt: LocalizedString;
   credit?: string;
 };
 
