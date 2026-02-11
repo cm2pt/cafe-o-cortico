@@ -73,6 +73,7 @@ export default async function MenuPage() {
           <p className="font-semibold text-[#2d1d14]">
             {t(menu.vegetarianNote, lang)}
           </p>
+          <p className="text-xs text-[#8b7768]">{t(menu.priceNote, lang)}</p>
         </div>
       </Container>
     </main>

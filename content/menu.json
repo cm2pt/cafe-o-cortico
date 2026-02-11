@@ -21,7 +21,7 @@
             "pt": "Espresso intenso e bem equilibrado.",
             "en": "Balanced espresso with a rich aroma."
           },
-          "price": { "pt": "Sob consulta", "en": "Ask at counter" },
+          "price": { "pt": "€1,20", "en": "€1.20" },
           "tags": [{ "pt": "best-seller", "en": "best-seller" }]
         },
         {
@@ -30,7 +30,7 @@
             "pt": "Cremoso e reconfortante.",
             "en": "Creamy and comforting."
           },
-          "price": { "pt": "Sob consulta", "en": "Ask at counter" },
+          "price": { "pt": "€2,50", "en": "€2.50" },
           "tags": []
         },
         {
@@ -39,7 +39,7 @@
             "pt": "Opções clássicas para o final do dia.",
             "en": "Classic options for the end of the day."
           },
-          "price": { "pt": "Sob consulta", "en": "Ask at counter" },
+          "price": { "pt": "€5,50", "en": "€5.50" },
           "tags": [{ "pt": "seasonal", "en": "seasonal" }]
         }
       ]
@@ -58,7 +58,7 @@
             "pt": "Recheios clássicos e sazonais.",
             "en": "Classic and seasonal fillings."
           },
-          "price": { "pt": "Sob consulta", "en": "Ask at counter" },
+          "price": { "pt": "€4,20", "en": "€4.20" },
           "tags": [{ "pt": "best-seller", "en": "best-seller" }]
         },
         {
@@ -67,7 +67,7 @@
             "pt": "Servidas com toppings à escolha.",
             "en": "Served with your choice of toppings."
           },
-          "price": { "pt": "Sob consulta", "en": "Ask at counter" },
+          "price": { "pt": "€4,80", "en": "€4.80" },
           "tags": [{ "pt": "best-seller", "en": "best-seller" }]
         },
         {
@@ -76,7 +76,7 @@
             "pt": "Escolha do dia na vitrine.",
             "en": "Daily selection at the counter."
           },
-          "price": { "pt": "Sob consulta", "en": "Ask at counter" },
+          "price": { "pt": "€2,30", "en": "€2.30" },
           "tags": []
         }
       ]
@@ -95,7 +95,7 @@
             "pt": "Carne, frango ou opções vegetarianas.",
             "en": "Beef, chicken, or vegetarian options."
           },
-          "price": { "pt": "Sob consulta", "en": "Ask at counter" },
+          "price": { "pt": "€7,90", "en": "€7.90" },
           "tags": [
             { "pt": "best-seller", "en": "best-seller" },
             { "pt": "veg", "en": "veg" }
@@ -107,7 +107,7 @@
             "pt": "Combinadas para almoço rápido.",
             "en": "Perfect for a quick lunch."
           },
-          "price": { "pt": "Sob consulta", "en": "Ask at counter" },
+          "price": { "pt": "€4,90", "en": "€4.90" },
           "tags": [{ "pt": "veg", "en": "veg" }]
         },
         {
@@ -116,7 +116,7 @@
             "pt": "Receitas caseiras e sazonais.",
             "en": "Homestyle and seasonal recipes."
           },
-          "price": { "pt": "Sob consulta", "en": "Ask at counter" },
+          "price": { "pt": "€2,90", "en": "€2.90" },
           "tags": []
         }
       ]
@@ -129,5 +129,9 @@
   "vegetarianNote": {
     "pt": "Pergunte-nos pelas opções vegetarianas.",
     "en": "Ask us about vegetarian options."
+  },
+  "priceNote": {
+    "pt": "Preços indicativos para apresentação. Atualizamos assim que tiver o menu final.",
+    "en": "Indicative prices for presentation. We’ll update once the final menu is confirmed."
   }
 }

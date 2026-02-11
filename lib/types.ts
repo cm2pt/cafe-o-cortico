@@ -62,6 +62,7 @@ export type MenuData = {
   categories: MenuCategory[];
   allergenNote: LocalizedString;
   vegetarianNote: LocalizedString;
+  priceNote: LocalizedString;
 };
 
 export type PromoStripItem = {
