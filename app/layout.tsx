@@ -11,10 +11,10 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://cafeocortico.local"
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: `${site.name} | Torres Novas`,
-  description: site.shortDescription.pt,
+  description: "Café com esplanada, takeaway e estacionamento gratuito em Torres Novas.",
   openGraph: {
     title: `${site.name} | Torres Novas`,
-    description: site.shortDescription.pt,
+    description: "Café com esplanada, takeaway e estacionamento gratuito em Torres Novas.",
     type: "website",
     images: [
       {
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: `${site.name} | Torres Novas`,
-    description: site.shortDescription.pt,
+    description: "Café com esplanada, takeaway e estacionamento gratuito em Torres Novas.",
     images: ["/og.jpg"]
   }
 };

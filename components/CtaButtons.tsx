@@ -6,14 +6,12 @@ import { t, ui } from "@/lib/i18n";
 type CtaButtonsProps = {
   layout?: "row" | "stack";
   size?: "sm" | "md";
-  showInstagram?: boolean;
   lang: Lang;
 };
 
 export default function CtaButtons({
   layout = "row",
   size = "md",
-  showInstagram = true,
   lang
 }: CtaButtonsProps) {
   const hasPhone = site.phone.trim().length > 0;
@@ -45,16 +43,6 @@ export default function CtaButtons({
         >
           {t(ui.cta.call, lang)}
         </button>
-      )}
-      {showInstagram && (
-        <Link
-          href={site.instagramUrl}
-          target="_blank"
-          rel="noreferrer"
-          className={`rounded-full border border-[#d8c8bb] ${buttonPadding} text-sm font-semibold text-[#2d1d14] transition hover:border-transparent hover:bg-[#efe2d5]`}
-        >
-          {t(ui.cta.instagram, lang)}
-        </Link>
       )}
     </div>
   );

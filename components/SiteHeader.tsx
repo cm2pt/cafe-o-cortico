@@ -16,16 +16,22 @@ export default function SiteHeader({ lang }: SiteHeaderProps) {
     <header className="sticky top-0 z-40 border-b border-[#e4d8cc] bg-[#fbf7f2]/95 backdrop-blur">
       <Container className="flex items-center justify-between py-4">
         <Link href="/" className="flex items-center gap-3">
-          <div className="flex h-10 w-10 items-center justify-center overflow-hidden rounded-full border border-[#e2d5c9] bg-white">
-            <Image
-              src="/logo.webp"
-              alt={site.name}
-              width={40}
-              height={40}
-              className="h-full w-full object-contain"
-              priority
-            />
-          </div>
+          {site.logo ? (
+            <div className="flex h-10 w-10 items-center justify-center overflow-hidden rounded-full border border-[#e2d5c9] bg-white">
+              <Image
+                src={site.logo}
+                alt={site.name}
+                width={40}
+                height={40}
+                className="h-full w-full object-contain"
+                priority
+              />
+            </div>
+          ) : (
+            <div className="flex h-10 w-10 items-center justify-center rounded-full border border-[#e2d5c9] bg-white text-sm font-semibold">
+              CO
+            </div>
+          )}
           <div>
             <span className="block text-lg font-semibold tracking-tight text-[#2d1d14]">
               {site.name}
@@ -51,7 +57,7 @@ export default function SiteHeader({ lang }: SiteHeaderProps) {
         </nav>
         <div className="hidden items-center gap-3 md:flex">
           <LanguageSwitcher lang={lang} />
-          <CtaButtons size="sm" showInstagram={false} lang={lang} />
+          <CtaButtons size="sm" lang={lang} />
         </div>
         <div className="md:hidden">
           <LanguageSwitcher lang={lang} />

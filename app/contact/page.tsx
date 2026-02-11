@@ -9,8 +9,8 @@ import { buildLocalBusinessSchema } from "@/lib/structuredData";
 import { resolveLang, t, ui } from "@/lib/i18n";
 
 export const metadata: Metadata = {
-  title: "Contact | Café O Cortiço",
-  description: "Plan your visit to Café O Cortiço in Torres Novas."
+  title: "Contacto | Café O Cortiço",
+  description: "Morada, horário e contactos do Café O Cortiço em Torres Novas."
 };
 
 export default async function ContactPage() {
@@ -31,10 +31,10 @@ export default async function ContactPage() {
             {t(ui.nav.contact, lang)}
           </p>
           <h1 className="mt-4 text-4xl font-semibold text-[#2d1d14]">
-            {t(ui.labels.contactTitle, lang)}
+            {t(ui.labels.locationTitle, lang)}
           </h1>
           <p className="mt-4 text-base text-[#6f5a4d]">
-            {t(ui.labels.contactIntro, lang)}
+            {site.address.line1}, {site.address.postalCode} {site.address.line2}
           </p>
 
           <div className="mt-6">
@@ -44,29 +44,23 @@ export default async function ContactPage() {
           <div className="mt-10 grid gap-4">
             <div className="rounded-2xl border border-[#e4d8cc] bg-white/90 p-5">
               <p className="text-sm font-semibold text-[#2d1d14]">
-                {t(ui.labels.address, lang)}
+                {t(ui.labels.servicesTitle, lang)}
               </p>
-              <p className="mt-2 text-sm text-[#6f5a4d]">
-                {site.address.line1}
-              </p>
-              <p className="text-sm text-[#6f5a4d]">{site.address.line2}</p>
-              {site.address.line3 ? (
-                <p className="text-sm text-[#6f5a4d]">{site.address.line3}</p>
-              ) : null}
+              <ul className="mt-2 grid gap-1 text-sm text-[#6f5a4d]">
+                {site.services.map((service) => (
+                  <li key={service.key}>{t(service.label, lang)}</li>
+                ))}
+              </ul>
             </div>
             <div className="rounded-2xl border border-[#e4d8cc] bg-white/90 p-5">
-              <p className="text-sm font-semibold text-[#2d1d14]">
-                {t(ui.labels.updates, lang)}
-              </p>
-              <p className="mt-2 text-sm text-[#6f5a4d]">
-                {t(ui.labels.updatesCopy, lang)}
-              </p>
+              <p className="text-sm font-semibold text-[#2d1d14]">Telefone</p>
+              <p className="mt-2 text-sm text-[#6f5a4d]">{site.phone}</p>
             </div>
           </div>
         </div>
 
         <div className="space-y-6">
-          <HoursBlock lang={lang} />
+          <HoursBlock lang={lang} showCloseTime />
           <MapEmbed lang={lang} />
         </div>
       </Container>

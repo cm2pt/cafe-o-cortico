@@ -1,8 +1,8 @@
 import { site } from "@/lib/data";
 import type { HoursEntry } from "@/lib/types";
 
-const toOpeningHoursSpecification = (weekSchedule: HoursEntry[]) => {
-  return weekSchedule
+const toOpeningHoursSpecification = (weekSchedule: HoursEntry[]) =>
+  weekSchedule
     .filter((entry) => entry.open && entry.close)
     .map((entry) => ({
       "@type": "OpeningHoursSpecification",
@@ -10,7 +10,6 @@ const toOpeningHoursSpecification = (weekSchedule: HoursEntry[]) => {
       opens: entry.open,
       closes: entry.close
     }));
-};
 
 export const buildLocalBusinessSchema = (siteUrl: string) => {
   const openingHoursSpecification = toOpeningHoursSpecification(
@@ -21,17 +20,24 @@ export const buildLocalBusinessSchema = (siteUrl: string) => {
     "@context": "https://schema.org",
     "@type": "CafeOrCoffeeShop",
     name: site.name,
-    description: site.shortDescription.pt,
     url: siteUrl,
-    telephone: site.phone || undefined,
-    email: site.email || undefined,
+    telephone: site.phone,
     address: {
       "@type": "PostalAddress",
       streetAddress: site.address.line1,
+      postalCode: site.address.postalCode,
       addressLocality: site.address.line2,
-      addressCountry: site.address.line3 || undefined
+      addressCountry: site.address.line3
     },
-    sameAs: [site.instagramUrl, site.facebookUrl],
+    geo:
+      site.coordinates.lat && site.coordinates.lng
+        ? {
+            "@type": "GeoCoordinates",
+            latitude: site.coordinates.lat,
+            longitude: site.coordinates.lng
+          }
+        : undefined,
+    sameAs: [site.social.instagram, site.social.facebook],
     openingHoursSpecification:
       openingHoursSpecification.length > 0 ? openingHoursSpecification : undefined
   };

@@ -1,29 +1,20 @@
 {
   "name": "Café O Cortiço",
-  "tagline": {
-    "pt": "Uma pausa de café tranquila no coração de Torres Novas.",
-    "en": "A calm coffee break in the heart of Torres Novas."
-  },
-  "shortDescription": {
-    "pt": "Um café acolhedor para espresso, pastelaria e conversa descontraída.",
-    "en": "A welcoming café for espresso, pastries, and relaxed conversation."
-  },
-  "phone": "912 869 168",
-  "email": "",
+  "logo": "/logo.webp",
+  "phone": "+351 912 869 168",
   "address": {
     "line1": "Avenida Dr. Sá Carneiro 3",
-    "line2": "2350-536 Torres Novas",
-    "line3": "Portugal"
+    "line2": "Torres Novas",
+    "line3": "Portugal",
+    "postalCode": "2350-536"
   },
-  "googleMapsUrl": "https://www.google.com/maps?q=Caf%C3%A9%20O%20Cortico%2C%20Avenida%20Dr.%20S%C3%A1%20Carneiro%203%2C%202350-536%20Torres%20Novas&output=embed",
-  "instagramUrl": "https://www.instagram.com/cafeocortico/",
-  "facebookUrl": "https://www.facebook.com/profile.php?id=100063552132251",
+  "googleMapsPlaceUrl": "https://share.google/V2SerdI6eGsBFIEXV",
+  "coordinates": {
+    "lat": null,
+    "lng": null
+  },
   "hours": {
     "timezone": "Europe/Lisbon",
-    "hoursNote": {
-      "pt": "Aberto todos os dias, 07:00–00:00.",
-      "en": "Open daily, 07:00–00:00."
-    },
     "weekSchedule": [
       { "day": "Monday", "open": "07:00", "close": "00:00" },
       { "day": "Tuesday", "open": "07:00", "close": "00:00" },
@@ -33,5 +24,31 @@
       { "day": "Saturday", "open": "07:00", "close": "00:00" },
       { "day": "Sunday", "open": "07:00", "close": "00:00" }
     ]
+  },
+  "services": [
+    {
+      "key": "takeaway",
+      "label": { "pt": "Takeaway", "en": "Takeaway" }
+    },
+    {
+      "key": "esplanada",
+      "label": { "pt": "Esplanada", "en": "Outdoor seating" }
+    },
+    {
+      "key": "parking",
+      "label": { "pt": "Estacionamento gratuito", "en": "Free parking" }
+    },
+    {
+      "key": "accessibility",
+      "label": { "pt": "Acessível a cadeira de rodas", "en": "Wheelchair accessible" }
+    },
+    {
+      "key": "catering",
+      "label": { "pt": "Catering disponível", "en": "Catering available" }
+    }
+  ],
+  "social": {
+    "instagram": "https://www.instagram.com/cafeocortico/",
+    "facebook": "https://www.facebook.com/profile.php?id=100063552132251"
   }
 }

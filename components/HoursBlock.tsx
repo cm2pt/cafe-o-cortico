@@ -5,17 +5,18 @@ import { t, ui } from "@/lib/i18n";
 
 type HoursBlockProps = {
   lang: Lang;
+  showCloseTime?: boolean;
 };
 
-export default function HoursBlock({ lang }: HoursBlockProps) {
-  const { weekSchedule, hoursNote, timezone } = site.hours;
+export default function HoursBlock({ lang, showCloseTime = false }: HoursBlockProps) {
+  const { weekSchedule, timezone } = site.hours;
   const status = getOpenStatus(weekSchedule, timezone, lang);
 
   return (
     <div className="rounded-3xl border border-[#e4d8cc] bg-white/90 p-6">
       <div className="flex items-center justify-between">
         <h3 className="text-lg font-semibold text-[#2d1d14]">
-          {t(ui.labels.hours, lang)}
+          {t(ui.labels.openNow, lang)}
         </h3>
         <span
           className={`rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] ${
@@ -29,6 +30,11 @@ export default function HoursBlock({ lang }: HoursBlockProps) {
           {status.label}
         </span>
       </div>
+      {showCloseTime && status.isOpen !== null ? (
+        <p className="mt-2 text-sm text-[#6f5a4d]">
+          {t(ui.labels.closesAt, lang)} {status.closesAt}
+        </p>
+      ) : null}
       <div className="mt-4 grid gap-3 text-sm text-[#6f5a4d]">
         {weekSchedule.map((entry) => (
           <div
@@ -42,9 +48,6 @@ export default function HoursBlock({ lang }: HoursBlockProps) {
           </div>
         ))}
       </div>
-      {status.isOpen === null ? (
-        <p className="mt-4 text-xs text-[#6f5a4d]">{t(hoursNote, lang)}</p>
-      ) : null}
     </div>
   );
 }

@@ -23,7 +23,7 @@ export default function MenuCategory({ category, lang }: MenuCategoryProps) {
           ) : null}
         </div>
         {category.image ? (
-          <div className="h-24 w-full overflow-hidden rounded-2xl border border-[#e4d8cc] bg-white md:h-20 md:w-40">
+          <div className="h-20 w-full overflow-hidden rounded-2xl border border-[#e4d8cc] bg-white md:w-40">
             <Image
               src={category.image}
               alt={t(category.title, lang)}
@@ -48,24 +48,22 @@ export default function MenuCategory({ category, lang }: MenuCategoryProps) {
                 <p className="mt-2 text-sm text-[#6f5a4d]">
                   {t(item.description, lang)}
                 </p>
-                {item.badges && item.badges.length > 0 ? (
+                {item.tags && item.tags.length > 0 ? (
                   <div className="mt-3 flex flex-wrap gap-2">
-                    {item.badges.map((badge) => (
+                    {item.tags.map((tag) => (
                       <span
-                        key={t(badge, lang)}
+                        key={t(tag, lang)}
                         className="rounded-full bg-[#f0e1d3] px-2 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-[#2d1d14]"
                       >
-                        {t(badge, lang)}
+                        {t(tag, lang)}
                       </span>
                     ))}
                   </div>
                 ) : null}
               </div>
-              {item.price ? (
-                <span className="text-sm font-semibold text-[#2d1d14]">
-                  {item.price}
-                </span>
-              ) : null}
+              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#8b7768]">
+                {t(item.price, lang)}
+              </span>
             </div>
           </div>
         ))}

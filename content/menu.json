@@ -1,115 +1,139 @@
 {
+  "hero": {
+    "title": { "pt": "Menu que sabe a casa", "en": "A menu that feels like home" },
+    "subtitle": {
+      "pt": "Do café às refeições rápidas, com opções vegetarianas e doces irresistíveis.",
+      "en": "From coffee to quick meals, with vegetarian options and sweet treats."
+    }
+  },
+  "dailySpecial": {
+    "enabled": false,
+    "name": { "pt": "Prato do dia", "en": "Dish of the day" },
+    "description": {
+      "pt": "Pergunte-nos pela sugestão de hoje.",
+      "en": "Ask us about today’s special."
+    },
+    "price": { "pt": "Sob consulta", "en": "Ask at counter" }
+  },
   "categories": [
     {
-      "title": { "pt": "Espresso & Café", "en": "Espresso & Coffee" },
+      "title": { "pt": "Café & Bebidas", "en": "Coffee & Drinks" },
       "description": {
-        "pt": "Espresso equilibrado e clássicos com leite.",
-        "en": "Balanced espresso and milk-based classics."
+        "pt": "Café, chocolate quente e bebidas frescas.",
+        "en": "Coffee, hot chocolate, and refreshing drinks."
       },
       "image": "/menu/coffee.jpg",
       "items": [
         {
-          "name": { "pt": "Espresso", "en": "Espresso" },
+          "name": { "pt": "Café", "en": "Coffee" },
           "description": {
-            "pt": "Curto, rico e aromático.",
-            "en": "Short, rich, and aromatic."
+            "pt": "Espresso intenso e bem equilibrado.",
+            "en": "Balanced espresso with a rich aroma."
           },
-          "price": null,
-          "badges": [{ "pt": "popular", "en": "popular" }]
+          "price": { "pt": "Sob consulta", "en": "Ask at counter" },
+          "tags": [{ "pt": "best-seller", "en": "best-seller" }]
         },
         {
-          "name": { "pt": "Cappuccino", "en": "Cappuccino" },
+          "name": { "pt": "Chocolate quente", "en": "Hot chocolate" },
           "description": {
-            "pt": "Espuma cremosa com base intensa.",
-            "en": "Silky foam with a bold base."
+            "pt": "Cremoso e reconfortante.",
+            "en": "Creamy and comforting."
           },
-          "price": null,
-          "badges": []
+          "price": { "pt": "Sob consulta", "en": "Ask at counter" },
+          "tags": []
         },
         {
-          "name": { "pt": "Latte", "en": "Latte" },
+          "name": { "pt": "Cocktails", "en": "Cocktails" },
           "description": {
-            "pt": "Suave e cremoso, para ficar a saborear.",
-            "en": "Smooth and creamy, made to linger." 
+            "pt": "Opções clássicas para o final do dia.",
+            "en": "Classic options for the end of the day."
           },
-          "price": null,
-          "badges": []
+          "price": { "pt": "Sob consulta", "en": "Ask at counter" },
+          "tags": []
         }
       ]
     },
     {
-      "title": { "pt": "Pastelaria & Doces", "en": "Pastries & Sweets" },
+      "title": { "pt": "Doces", "en": "Sweet Treats" },
       "description": {
-        "pt": "Feitos diariamente, perfeitos com café.",
-        "en": "Baked daily, perfect with coffee."
+        "pt": "Crepes, panquecas e pastelaria.",
+        "en": "Crepes, pancakes, and pastries."
       },
       "image": "/menu/pastries.jpg",
       "items": [
         {
-          "name": { "pt": "Pastelaria do dia", "en": "Daily pastry" },
+          "name": { "pt": "Crepes", "en": "Crepes" },
           "description": {
-            "pt": "Pergunte pela seleção de hoje.",
-            "en": "Ask about today’s selection."
+            "pt": "Recheios clássicos e sazonais.",
+            "en": "Classic and seasonal fillings."
           },
-          "price": null,
-          "badges": [{ "pt": "novo", "en": "new" }]
+          "price": { "pt": "Sob consulta", "en": "Ask at counter" },
+          "tags": [{ "pt": "best-seller", "en": "best-seller" }]
         },
         {
-          "name": { "pt": "Fatia de bolo", "en": "Cake slice" },
+          "name": { "pt": "Panquecas", "en": "Pancakes" },
           "description": {
-            "pt": "Sabores e texturas a rodar.",
-            "en": "Rotating flavors and textures."
+            "pt": "Servidas com toppings à escolha.",
+            "en": "Served with your choice of toppings."
           },
-          "price": null,
-          "badges": []
+          "price": { "pt": "Sob consulta", "en": "Ask at counter" },
+          "tags": [{ "pt": "best-seller", "en": "best-seller" }]
         },
         {
-          "name": { "pt": "Doce pequeno", "en": "Sweet bite" },
+          "name": { "pt": "Pastelaria variada", "en": "Pastry selection" },
           "description": {
-            "pt": "Pequeno, fresco e satisfatório.",
-            "en": "Small, satisfying, and fresh."
+            "pt": "Escolha do dia na vitrine.",
+            "en": "Daily selection at the counter."
           },
-          "price": null,
-          "badges": []
+          "price": { "pt": "Sob consulta", "en": "Ask at counter" },
+          "tags": []
         }
       ]
     },
     {
-      "title": { "pt": "Tostas & Snacks", "en": "Toasts & Light Bites" },
+      "title": { "pt": "Snacks & Refeições", "en": "Snacks & Meals" },
       "description": {
-        "pt": "Quentes, simples e feitos na hora.",
-        "en": "Warm, simple, and made to order."
+        "pt": "Tostas, bifanas, hambúrgueres e sopas.",
+        "en": "Toasts, bifanas, burgers, and soups."
       },
       "image": "/menu/bites.jpg",
       "items": [
         {
-          "name": { "pt": "Sandes tostada", "en": "Toasted sandwich" },
+          "name": { "pt": "Hambúrgueres", "en": "Burgers" },
           "description": {
-            "pt": "Dourada, crocante e composta.",
-            "en": "Golden, crisp, and filling."
+            "pt": "Carne, frango ou opções vegetarianas.",
+            "en": "Beef, chicken, or vegetarian options."
           },
-          "price": null,
-          "badges": []
+          "price": { "pt": "Sob consulta", "en": "Ask at counter" },
+          "tags": [{ "pt": "best-seller", "en": "best-seller" }]
         },
         {
-          "name": { "pt": "Sopa do dia", "en": "Soup of the day" },
+          "name": { "pt": "Tostas", "en": "Toasts" },
           "description": {
-            "pt": "Confortável e sazonal.",
-            "en": "Comforting and seasonal."
+            "pt": "Combinadas para almoço rápido.",
+            "en": "Perfect for a quick lunch."
           },
-          "price": null,
-          "badges": []
+          "price": { "pt": "Sob consulta", "en": "Ask at counter" },
+          "tags": []
         },
         {
-          "name": { "pt": "Snack para partilhar", "en": "Snack plate" },
+          "name": { "pt": "Sopas", "en": "Soups" },
           "description": {
-            "pt": "Uma opção leve para dividir.",
-            "en": "A light bite to share."
+            "pt": "Receitas caseiras e sazonais.",
+            "en": "Homestyle and seasonal recipes."
           },
-          "price": null,
-          "badges": []
+          "price": { "pt": "Sob consulta", "en": "Ask at counter" },
+          "tags": []
         }
       ]
     }
-  ]
+  ],
+  "allergenNote": {
+    "pt": "Se tiver alergias alimentares, fale connosco antes de pedir.",
+    "en": "If you have food allergies, please let us know before ordering."
+  },
+  "vegetarianNote": {
+    "pt": "Pergunte-nos pelas opções vegetarianas.",
+    "en": "Ask us about vegetarian options."
+  }
 }

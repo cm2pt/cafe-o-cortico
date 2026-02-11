@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { mapsDirectionsUrl, site } from "@/lib/data";
+import { mapsDirectionsUrl, mapsEmbedUrl, site } from "@/lib/data";
 import type { Lang } from "@/lib/i18n";
 import { t, ui } from "@/lib/i18n";
 
@@ -12,16 +12,17 @@ export default function MapEmbed({ lang }: MapEmbedProps) {
     <div className="rounded-3xl border border-[#e4d8cc] bg-white/90 p-6">
       <div className="flex flex-col gap-2">
         <h3 className="text-lg font-semibold text-[#2d1d14]">
-          {t(ui.labels.findUs, lang)}
+          {t(ui.labels.locationTitle, lang)}
         </h3>
         <p className="text-sm text-[#6f5a4d]">
-          {site.address.line1}, {site.address.line2}
+          {site.address.line1}, {site.address.postalCode} {site.address.line2}
         </p>
+        <p className="text-xs text-[#8b7768]">{t(ui.labels.parkingNote, lang)}</p>
       </div>
       <div className="mt-5 overflow-hidden rounded-2xl border border-[#efe2d5]">
         <iframe
           title="Café O Cortiço map"
-          src={site.googleMapsUrl}
+          src={mapsEmbedUrl}
           className="h-64 w-full"
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
@@ -36,9 +37,6 @@ export default function MapEmbed({ lang }: MapEmbedProps) {
         >
           {t(ui.cta.directions, lang)}
         </Link>
-        <span className="text-xs text-[#6f5a4d]">
-          {t(ui.labels.tapMaps, lang)}
-        </span>
       </div>
     </div>
   );

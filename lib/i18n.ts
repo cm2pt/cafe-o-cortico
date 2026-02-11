@@ -27,95 +27,87 @@ export const ui = {
   cta: {
     directions: { pt: "Obter direções", en: "Get directions" },
     call: { pt: "Ligar", en: "Call" },
-    instagram: { pt: "Mensagem no Instagram", en: "Instagram DM" }
+    instagram: { pt: "Instagram", en: "Instagram" }
   },
   labels: {
-    featured: { pt: "Destaques", en: "Featured" },
-    whatYouCanGet: { pt: "O que pode pedir", en: "What you can get" },
-    menuHighlights: { pt: "Destaques do menu", en: "Menu highlights" },
-    simpleMenu: { pt: "Um menu simples, bem feito", en: "A simple menu, done well" },
-    whatsNew: { pt: "Novidades", en: "What’s new" },
-    hours: { pt: "Horário", en: "Hours" },
-    findUs: { pt: "Como chegar", en: "Find us" },
-    tapMaps: { pt: "Toque para abrir no Maps", en: "Tap to open in Maps" },
-    tapCall: { pt: "Toque para direções ou ligar", en: "Tap for directions or call" },
+    heroTitle: {
+      pt: "Café O Cortiço, Torres Novas",
+      en: "Café O Cortiço, Torres Novas"
+    },
+    heroSubtitle: {
+      pt: "Snack-bar com esplanada, takeaway e estacionamento gratuito.",
+      en: "Snack bar with outdoor seating, takeaway, and free parking."
+    },
     openNow: { pt: "Aberto agora", en: "Open now" },
     closedNow: { pt: "Fechado agora", en: "Closed now" },
     hoursUnavailable: { pt: "Horário indisponível", en: "Hours unavailable" },
-    galleryTitle: { pt: "Momentos do café", en: "Moments from the café" },
-    gallerySubtitle: {
-      pt: "Deslize para ver toda a coleção.",
-      en: "Swipe through the full collection."
+    closesAt: { pt: "Fecha às", en: "Closes at" },
+    bestSellers: { pt: "Mais pedidos", en: "Best sellers" },
+    bestSellersCopy: {
+      pt: "Crepes, panquecas, café e hambúrgueres.",
+      en: "Crepes, pancakes, coffee, and burgers."
     },
-    contactTitle: {
-      pt: "Visite-nos em Torres Novas",
-      en: "Visit us in Torres Novas"
+    servicesTitle: { pt: "Serviços", en: "Services" },
+    servicesCopy: {
+      pt: "Conveniência para o dia a dia.",
+      en: "Convenience for everyday visits."
     },
-    contactIntro: {
-      pt: "Estamos prontos para o receber. Use os botões para ligar ou abrir direções.",
-      en: "We’re ready to welcome you. Use the buttons below to call or open directions."
+    cateringTitle: { pt: "Catering", en: "Catering" },
+    cateringCopy: {
+      pt: "Fale connosco para catering de eventos e reuniões.",
+      en: "Talk to us about catering for events and meetings."
     },
-    address: { pt: "Morada", en: "Address" },
-    updates: { pt: "Atualizações", en: "Updates" },
-    updatesCopy: {
-      pt: "Para horários e novidades em tempo real, envie-nos mensagem no Instagram.",
-      en: "For real-time hours and specials, DM us on Instagram."
-    },
+    cateringCta: { pt: "Fale connosco", en: "Contact us" },
     socialProofTitle: {
-      pt: "O que os clientes mencionam",
-      en: "What customers mention"
+      pt: "Clientes mencionam",
+      en: "Customers mention"
+    },
+    socialProofCopy: {
+      pt: "Veja mais no Facebook, Instagram ou Google Maps.",
+      en: "See more on Facebook, Instagram, or Google Maps."
+    },
+    locationTitle: { pt: "Como chegar", en: "Location" },
+    locationCopy: {
+      pt: "Avenida Dr. Sá Carneiro 3, Torres Novas.",
+      en: "Avenida Dr. Sá Carneiro 3, Torres Novas."
+    },
+    parkingNote: {
+      pt: "Estacionamento gratuito nas imediações.",
+      en: "Free parking nearby."
+    },
+    menuIntro: {
+      pt: "Pratos rápidos, bebidas quentes e doces especiais.",
+      en: "Quick meals, hot drinks, and sweet treats."
+    },
+    dailySpecial: { pt: "Prato do dia", en: "Dish of the day" },
+    allergenNote: {
+      pt: "Se tiver alergias alimentares, informe-nos antes de pedir.",
+      en: "If you have food allergies, please tell us before ordering."
+    },
+    vegetarianNote: {
+      pt: "Pergunte-nos pelas opções vegetarianas.",
+      en: "Ask us about vegetarian options."
+    },
+    followInstagram: {
+      pt: "Siga no Instagram",
+      en: "Follow on Instagram"
+    },
+    followInstagramCopy: {
+      pt: "Veja o dia a dia do café nas redes sociais.",
+      en: "See daily moments from the café on social media."
+    },
+    galleryTitle: { pt: "Momentos do café", en: "Café moments" },
+    gallerySubtitle: {
+      pt: "Fotografias reais do espaço e do dia a dia.",
+      en: "Real photos from the café and everyday moments."
     },
     latestSocial: {
-      pt: "Últimas novidades",
-      en: "Latest updates"
-    },
-    latestSocialTitle: {
-      pt: "Posts recentes das redes sociais",
-      en: "Recent social posts"
-    },
-    latestSocialCopy: {
-      pt: "Acompanhe as novidades no Facebook e Instagram.",
-      en: "Follow updates on Facebook and Instagram."
-    },
-    instagramNote: {
-      pt: "Os posts mais recentes do Instagram abrem diretamente no perfil.",
-      en: "Latest Instagram posts open directly on the profile."
+      pt: "Atualizações",
+      en: "Updates"
     },
     openPage: {
       pt: "Abrir página",
       en: "Open page"
-    },
-    heroNote: {
-      pt: "Prefere mensagem? Fale connosco no Instagram para respostas rápidas.",
-      en: "Prefer DM? Reach us on Instagram for updates and quick replies."
-    },
-    featuredCopy: {
-      pt: "Espresso, pastelaria e snacks quentes para uma pausa tranquila.",
-      en: "Espresso, pastries, and warm bites made for a relaxed pause."
-    },
-    menuHighlightsCopy: {
-      pt: "Categorias que cobrem o essencial e um pouco mais.",
-      en: "Categories that cover the essentials and a little something extra."
-    },
-    seeFullMenu: {
-      pt: "Ver menu completo",
-      en: "See full menu"
-    },
-    heroLocation: {
-      pt: "Torres Novas · Portugal",
-      en: "Torres Novas · Portugal"
-    },
-    menuIntro: {
-      pt: "Pergunte pela seleção do dia e pelas novidades sazonais.",
-      en: "Ask the team for specials and seasonal additions."
-    },
-    menuImageAlt: {
-      pt: "Imagem do menu do café",
-      en: "Cafe menu image"
-    },
-    galleryIntro: {
-      pt: "Fotos reais do espaço e dos momentos do café.",
-      en: "Real photos from the café and its everyday moments."
     }
   },
   days: {

@@ -25,7 +25,15 @@ const getLisbonParts = (date: Date, timeZone: string) => {
     parts.find((part) => part.type === "minute")?.value ?? "0"
   );
 
-  return { weekday, minutes: hour * 60 + minute };
+  return { weekday, minutes: hour * 60 + minute, hour, minute };
+};
+
+const formatTime = (minutes: number) => {
+  const hrs = Math.floor(minutes / 60) % 24;
+  const mins = minutes % 60;
+  return `${hrs.toString().padStart(2, "0")}:${mins
+    .toString()
+    .padStart(2, "0")}`;
 };
 
 export const getOpenStatus = (
@@ -38,12 +46,13 @@ export const getOpenStatus = (
   }
 
   const { weekday, minutes } = getLisbonParts(new Date(), timeZone);
-  const today = weekSchedule.find((entry) => entry.day === weekday);
+  const todayIndex = weekSchedule.findIndex((entry) => entry.day === weekday);
 
-  if (!today) {
+  if (todayIndex === -1) {
     return { label: t(ui.labels.hoursUnavailable, lang), isOpen: null };
   }
 
+  const today = weekSchedule[todayIndex];
   const openMinutes = parseTime(today.open);
   const closeMinutes = parseTime(today.close);
 
@@ -51,14 +60,16 @@ export const getOpenStatus = (
     return { label: t(ui.labels.hoursUnavailable, lang), isOpen: null };
   }
 
-  const isOvernight = openMinutes > closeMinutes;
-  const isOpen = isOvernight
-    ? minutes >= openMinutes || minutes < closeMinutes
-    : minutes >= openMinutes && minutes < closeMinutes;
+  const closesNextDay = closeMinutes <= openMinutes;
+  const closeValue = closesNextDay ? closeMinutes + 24 * 60 : closeMinutes;
+  const nowValue = minutes + (minutes < openMinutes && closesNextDay ? 24 * 60 : 0);
+
+  const isOpen = nowValue >= openMinutes && nowValue < closeValue;
 
   return {
     label: isOpen ? t(ui.labels.openNow, lang) : t(ui.labels.closedNow, lang),
-    isOpen
+    isOpen,
+    closesAt: formatTime(closeMinutes)
   };
 };
 

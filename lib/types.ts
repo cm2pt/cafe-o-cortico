@@ -8,30 +8,39 @@ export type HoursEntry = {
 
 export type SiteData = {
   name: string;
-  tagline: LocalizedString;
-  shortDescription: LocalizedString;
+  logo?: string;
   phone: string;
-  email: string;
   address: {
     line1: string;
     line2: string;
     line3: string;
+    postalCode: string;
   };
-  googleMapsUrl: string;
-  instagramUrl: string;
-  facebookUrl: string;
+  googleMapsPlaceUrl: string;
+  coordinates: {
+    lat: number | null;
+    lng: number | null;
+  };
   hours: {
     timezone: string;
-    hoursNote: LocalizedString;
     weekSchedule: HoursEntry[];
+  };
+  services: {
+    key: string;
+    label: LocalizedString;
+  }[];
+  social: {
+    instagram: string;
+    facebook: string;
   };
 };
 
 export type MenuItem = {
   name: LocalizedString;
   description: LocalizedString;
-  price: string | null;
-  badges?: LocalizedString[];
+  price: LocalizedString;
+  tags?: LocalizedString[];
+  image?: string;
 };
 
 export type MenuCategory = {
@@ -42,31 +51,19 @@ export type MenuCategory = {
 };
 
 export type MenuData = {
-  categories: MenuCategory[];
-};
-
-export type PromoStripItem = {
-  label: LocalizedString;
-  text: LocalizedString;
-};
-
-export type FeaturedItem = {
-  name: LocalizedString;
-  description: LocalizedString;
-  badge?: LocalizedString;
-  image: string;
-};
-
-export type PromosData = {
-  promoStrip: PromoStripItem[];
-  featuredItems: FeaturedItem[];
-  happyHour: {
+  hero: {
     title: LocalizedString;
-    description: LocalizedString;
-    hoursNote: LocalizedString;
-    ctaLabel: LocalizedString;
+    subtitle: LocalizedString;
   };
-  seasonalNote: LocalizedString;
+  dailySpecial: {
+    enabled: boolean;
+    name: LocalizedString;
+    description: LocalizedString;
+    price: LocalizedString;
+  };
+  categories: MenuCategory[];
+  allergenNote: LocalizedString;
+  vegetarianNote: LocalizedString;
 };
 
 export type GalleryImage = {
@@ -77,4 +74,12 @@ export type GalleryImage = {
 
 export type GalleryData = {
   images: GalleryImage[];
+};
+
+export type TestimonialItem = {
+  quote: LocalizedString;
+};
+
+export type TestimonialsData = {
+  items: TestimonialItem[];
 };

@@ -15,31 +15,35 @@ export default function SiteFooter({ lang }: SiteFooterProps) {
         <div>
           <p className="text-xl font-semibold text-[#2d1d14]">{site.name}</p>
           <p className="mt-2 text-sm text-[#6f5a4d]">
-            {t(site.tagline, lang)}
+            {t(ui.labels.heroSubtitle, lang)}
           </p>
           <div className="mt-4 flex items-center gap-3 text-sm font-semibold text-[#6f5a4d]">
-            <Link href={site.instagramUrl} target="_blank" rel="noreferrer">
+            <Link href={site.social.instagram} target="_blank" rel="noreferrer">
               Instagram
             </Link>
             <span aria-hidden="true">•</span>
-            <Link href={site.facebookUrl} target="_blank" rel="noreferrer">
+            <Link href={site.social.facebook} target="_blank" rel="noreferrer">
               Facebook
             </Link>
           </div>
         </div>
         <div className="text-sm text-[#6f5a4d]">
           <p className="font-semibold text-[#2d1d14]">
-            {t(ui.labels.address, lang)}
+            {t(ui.labels.locationTitle, lang)}
           </p>
           <p className="mt-2">{site.address.line1}</p>
-          <p>{site.address.line2}</p>
-          {site.address.line3 ? <p>{site.address.line3}</p> : null}
+          <p>{site.address.postalCode} {site.address.line2}</p>
+          <p>{site.address.line3}</p>
         </div>
         <div className="text-sm text-[#6f5a4d]">
           <p className="font-semibold text-[#2d1d14]">
-            {t(ui.labels.hours, lang)}
+            {t(ui.labels.servicesTitle, lang)}
           </p>
-          <p className="mt-2">{t(site.hours.hoursNote, lang)}</p>
+          <ul className="mt-2 grid gap-1">
+            {site.services.map((service) => (
+              <li key={service.key}>{t(service.label, lang)}</li>
+            ))}
+          </ul>
         </div>
       </Container>
     </footer>

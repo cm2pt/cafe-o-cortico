@@ -2,12 +2,13 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { cookies } from "next/headers";
 import Container from "@/components/Container";
+import InstagramPreview from "@/components/InstagramPreview";
 import { gallery } from "@/lib/data";
 import { resolveLang, t, ui } from "@/lib/i18n";
 
 export const metadata: Metadata = {
-  title: "Gallery | Café O Cortiço",
-  description: "A look inside Café O Cortiço in Torres Novas."
+  title: "Galeria | Café O Cortiço",
+  description: "Fotos reais do Café O Cortiço em Torres Novas."
 };
 
 export default async function GalleryPage() {
@@ -49,6 +50,12 @@ export default async function GalleryPage() {
           ))}
         </div>
       </div>
+
+      <Container>
+        <div className="mt-10">
+          <InstagramPreview lang={lang} />
+        </div>
+      </Container>
     </main>
   );
 }
