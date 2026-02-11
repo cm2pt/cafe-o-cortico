@@ -8,6 +8,7 @@ export type HoursEntry = {
 
 export type SiteData = {
   name: string;
+  logo?: string;
   phone: string;
   address: {
     line1: string;
