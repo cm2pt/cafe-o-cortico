@@ -1,33 +1,20 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f6f0e8;
+  color-scheme: light;
+  --background: #f8f2ec;
   --foreground: #2d1d14;
-  --accent: #e1a373;
-  --accent-dark: #b0734e;
-  --muted: #6f5a4d;
-  --card: #fff9f2;
-  --outline: rgba(45, 29, 20, 0.15);
-  --font-body: "Manrope", "Avenir Next", "Segoe UI", "Trebuchet MS", sans-serif;
-  --font-display: "Fraunces", "Iowan Old Style", "Palatino", "Times New Roman", serif;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-accent: var(--accent);
-  --color-accent-dark: var(--accent-dark);
-  --color-muted: var(--muted);
-  --color-card: var(--card);
-  --color-outline: var(--outline);
-  --font-body: var(--font-body);
-  --font-display: var(--font-display);
 }
 
 body {
-  background: radial-gradient(circle at top, #fdf9f4 0%, #f6efe7 45%, #efe2d5 100%);
+  background: #f8f2ec;
   color: var(--foreground);
-  font-family: var(--font-body);
+  font-family: "Avenir Next", "Segoe UI", "Trebuchet MS", sans-serif;
   min-height: 100vh;
 }
 
@@ -45,5 +32,5 @@ img {
 }
 
 ::selection {
-  background: rgba(225, 163, 115, 0.35);
+  background: rgba(196, 150, 114, 0.3);
 }

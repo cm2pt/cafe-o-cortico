@@ -1,0 +1,10 @@
+{
+  "images": [
+    { "src": "/gallery/01.jpg", "alt": "Coffee bar close-up", "credit": "" },
+    { "src": "/gallery/02.jpg", "alt": "Pastry counter", "credit": "" },
+    { "src": "/gallery/03.jpg", "alt": "Cozy seating", "credit": "" },
+    { "src": "/gallery/04.jpg", "alt": "Barista preparing espresso", "credit": "" },
+    { "src": "/gallery/05.jpg", "alt": "Warm light in the café", "credit": "" },
+    { "src": "/gallery/06.jpg", "alt": "Shared table", "credit": "" }
+  ]
+}

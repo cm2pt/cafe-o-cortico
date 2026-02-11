@@ -1,23 +1,39 @@
 {
-  "strip": {
-    "title": "New in the display",
-    "description": "Ask about today’s pastry and the barista’s favorite pairing."
-  },
-  "promos": [
+  "promoStrip": [
     {
-      "title": "Work-from-café mornings",
-      "description": "Quiet seats, steady coffee, and friendly service.",
-      "cta": "Drop by early"
+      "label": "Fresh today",
+      "text": "Ask about the pastry counter and the barista’s pick."
     },
     {
-      "title": "Afternoon pick-me-up",
-      "description": "Espresso, a warm snack, and a calm table.",
-      "cta": "Bring a friend"
-    },
-    {
-      "title": "Weekend slow-down",
-      "description": "A relaxed stop for coffee and conversation.",
-      "cta": "Stay a while"
+      "label": "Workspace friendly",
+      "text": "Settle in with a coffee and a calm table."
     }
-  ]
+  ],
+  "featuredItems": [
+    {
+      "name": "House espresso",
+      "description": "Balanced and aromatic with a smooth finish.",
+      "badge": "popular",
+      "image": "/menu/coffee.jpg"
+    },
+    {
+      "name": "Daily pastry",
+      "description": "Baked fresh and ready for a mid-morning pause.",
+      "badge": "new",
+      "image": "/menu/pastries.jpg"
+    },
+    {
+      "name": "Toasted sandwich",
+      "description": "Warm, crisp, and satisfying.",
+      "badge": "filling",
+      "image": "/menu/bites.jpg"
+    }
+  ],
+  "happyHour": {
+    "title": "Afternoon recharge",
+    "description": "Drop in for coffee and something sweet in the late afternoon.",
+    "hoursNote": "Ask the team about timing.",
+    "ctaLabel": "Plan an afternoon visit"
+  },
+  "seasonalNote": "Seasonal treats rotate weekly. Follow Instagram for updates."
 }

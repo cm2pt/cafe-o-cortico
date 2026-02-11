@@ -1,31 +1,28 @@
 {
   "name": "Café O Cortiço",
-  "tagline": "Coffee, conversation, and a calm pause in Torres Novas.",
-  "city": "Torres Novas",
-  "country": "Portugal",
+  "tagline": "A calm coffee break in the heart of Torres Novas.",
+  "shortDescription": "A welcoming café for espresso, pastries, and relaxed conversation.",
+  "phone": "",
+  "email": "",
   "address": {
     "line1": "Torres Novas",
-    "line2": "Portugal"
+    "line2": "Portugal",
+    "line3": ""
   },
-  "contact": {
-    "phone": "",
-    "email": ""
-  },
-  "hours": [
-    { "label": "Monday", "hours": "TBD" },
-    { "label": "Tuesday", "hours": "TBD" },
-    { "label": "Wednesday", "hours": "TBD" },
-    { "label": "Thursday", "hours": "TBD" },
-    { "label": "Friday", "hours": "TBD" },
-    { "label": "Saturday", "hours": "TBD" },
-    { "label": "Sunday", "hours": "TBD" }
-  ],
-  "map": {
-    "query": "Café O Cortiço, Torres Novas",
-    "embedUrl": "https://www.google.com/maps?q=Caf%C3%A9%20O%20Cortico%20Torres%20Novas&output=embed"
-  },
-  "social": {
-    "instagram": "https://www.instagram.com/cafeocortico/",
-    "facebook": "https://www.facebook.com/profile.php?id=100063552132251"
+  "googleMapsUrl": "https://share.google/V2SerdI6eGsBFIEXV",
+  "instagramUrl": "https://www.instagram.com/cafeocortico/",
+  "facebookUrl": "https://www.facebook.com/profile.php?id=100063552132251",
+  "hours": {
+    "timezone": "Europe/Lisbon",
+    "hoursNote": "Hours change seasonally. Check Instagram for the latest updates.",
+    "weekSchedule": [
+      { "day": "Monday", "open": null, "close": null },
+      { "day": "Tuesday", "open": null, "close": null },
+      { "day": "Wednesday", "open": null, "close": null },
+      { "day": "Thursday", "open": null, "close": null },
+      { "day": "Friday", "open": null, "close": null },
+      { "day": "Saturday", "open": null, "close": null },
+      { "day": "Sunday", "open": null, "close": null }
+    ]
   }
 }

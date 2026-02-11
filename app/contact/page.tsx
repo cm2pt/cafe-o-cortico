@@ -1,101 +1,67 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import Container from "@/components/Container";
-import site from "@/content/site.json";
+import CtaButtons from "@/components/CtaButtons";
+import HoursBlock from "@/components/HoursBlock";
+import MapEmbed from "@/components/MapEmbed";
+import { site } from "@/lib/data";
+import { buildLocalBusinessSchema } from "@/lib/structuredData";
 
 export const metadata: Metadata = {
   title: "Contact | Café O Cortiço",
   description: "Plan your visit to Café O Cortiço in Torres Novas."
 };
 
-const directionsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-  site.map.query
-)}`;
-
 export default function ContactPage() {
+  const schema = buildLocalBusinessSchema(
+    process.env.NEXT_PUBLIC_SITE_URL ?? "https://cafeocortico.local"
+  );
+
   return (
     <main className="pb-20 pt-12">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
       <Container className="grid gap-12 md:grid-cols-[1.05fr_0.95fr]">
         <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-muted">
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#8b7768]">
             Contact
           </p>
-          <h1 className="mt-4 font-[var(--font-display)] text-4xl font-semibold">
-            We’d love to see you
+          <h1 className="mt-4 text-4xl font-semibold text-[#2d1d14]">
+            Visit us in Torres Novas
           </h1>
-          <p className="mt-4 text-base text-muted">
-            Drop by for a coffee break or message us on social for updates.
+          <p className="mt-4 text-base text-[#6f5a4d]">
+            We’re ready to welcome you. Use the buttons below to call or open
+            directions.
           </p>
 
-          <div className="mt-8 space-y-6">
-            <div className="rounded-2xl border border-outline bg-card p-5">
-              <p className="text-sm font-semibold text-foreground">Address</p>
-              <p className="mt-2 text-sm text-muted">{site.address.line1}</p>
-              <p className="text-sm text-muted">{site.address.line2}</p>
-              <Link
-                href={directionsUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="mt-4 inline-flex text-sm font-semibold text-foreground underline-offset-4 hover:underline"
-              >
-                Get directions
-              </Link>
-            </div>
-            <div className="rounded-2xl border border-outline bg-card p-5">
-              <p className="text-sm font-semibold text-foreground">Phone</p>
-              <p className="mt-2 text-sm text-muted">
-                Phone number available on request.
+          <div className="mt-6">
+            <CtaButtons layout="stack" />
+          </div>
+
+          <div className="mt-10 grid gap-4">
+            <div className="rounded-2xl border border-[#e4d8cc] bg-white/90 p-5">
+              <p className="text-sm font-semibold text-[#2d1d14]">Address</p>
+              <p className="mt-2 text-sm text-[#6f5a4d]">
+                {site.address.line1}
               </p>
+              <p className="text-sm text-[#6f5a4d]">{site.address.line2}</p>
+              {site.address.line3 ? (
+                <p className="text-sm text-[#6f5a4d]">{site.address.line3}</p>
+              ) : null}
             </div>
-            <div className="rounded-2xl border border-outline bg-card p-5">
-              <p className="text-sm font-semibold text-foreground">Email</p>
-              <p className="mt-2 text-sm text-muted">
-                Email address available on request.
+            <div className="rounded-2xl border border-[#e4d8cc] bg-white/90 p-5">
+              <p className="text-sm font-semibold text-[#2d1d14]">Updates</p>
+              <p className="mt-2 text-sm text-[#6f5a4d]">
+                For real-time hours and specials, DM us on Instagram.
               </p>
-            </div>
-            <div className="rounded-2xl border border-outline bg-card p-5">
-              <p className="text-sm font-semibold text-foreground">Social</p>
-              <div className="mt-3 flex gap-4 text-sm font-semibold text-muted">
-                <Link href={site.social.instagram} target="_blank" rel="noreferrer">
-                  Instagram
-                </Link>
-                <Link href={site.social.facebook} target="_blank" rel="noreferrer">
-                  Facebook
-                </Link>
-              </div>
             </div>
           </div>
         </div>
 
         <div className="space-y-6">
-          <div className="rounded-2xl border border-outline bg-card p-5">
-            <h2 className="text-lg font-semibold">Opening hours</h2>
-            <div className="mt-4 grid gap-3 text-sm text-muted">
-              {site.hours.map((entry) => (
-                <div
-                  key={entry.label}
-                  className="flex items-center justify-between border-b border-outline pb-2 last:border-b-0"
-                >
-                  <span>{entry.label}</span>
-                  <span className="font-semibold text-foreground">
-                    {entry.hours}
-                  </span>
-                </div>
-              ))}
-            </div>
-            <p className="mt-4 text-xs text-muted">
-              Hours are updated weekly on social channels.
-            </p>
-          </div>
-
-          <div className="overflow-hidden rounded-3xl border border-outline bg-card">
-            <iframe
-              title="Café O Cortiço map"
-              src={site.map.embedUrl}
-              className="h-72 w-full"
-              loading="lazy"
-            />
-          </div>
+          <HoursBlock />
+          <MapEmbed />
         </div>
       </Container>
     </main>
