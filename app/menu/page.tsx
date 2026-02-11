@@ -4,7 +4,7 @@ import { cookies } from "next/headers";
 import Container from "@/components/Container";
 import MenuCategory from "@/components/MenuCategory";
 import BestSellers from "@/components/BestSellers";
-import { menu } from "@/lib/data";
+import { menu, promos } from "@/lib/data";
 import { resolveLang, t, ui } from "@/lib/i18n";
 
 export const metadata: Metadata = {
@@ -45,18 +45,15 @@ export default async function MenuPage() {
           <BestSellers lang={lang} />
         </div>
 
-        {menu.dailySpecial.enabled ? (
+        {promos.dailySpecial.enabled ? (
           <div className="mt-10 rounded-3xl border border-[#e4d8cc] bg-[#f6ede4] p-6">
             <div className="flex items-center justify-between">
               <h2 className="text-2xl font-semibold text-[#2d1d14]">
-                {t(menu.dailySpecial.name, lang)}
+                {t(promos.dailySpecial.title, lang)}
               </h2>
-              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#8b7768]">
-                {t(menu.dailySpecial.price, lang)}
-              </span>
             </div>
             <p className="mt-3 text-sm text-[#6f5a4d]">
-              {t(menu.dailySpecial.description, lang)}
+              {t(promos.dailySpecial.description, lang)}
             </p>
           </div>
         ) : null}

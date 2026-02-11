@@ -1,6 +1,5 @@
 {
   "name": "Café O Cortiço",
-  "logo": "/logo.webp",
   "phone": "+351 912 869 168",
   "address": {
     "line1": "Avenida Dr. Sá Carneiro 3",
@@ -8,7 +7,7 @@
     "line3": "Portugal",
     "postalCode": "2350-536"
   },
-  "googleMapsPlaceUrl": "https://share.google/V2SerdI6eGsBFIEXV",
+  "googleMapsUrl": "https://share.google/V2SerdI6eGsBFIEXV",
   "coordinates": {
     "lat": null,
     "lng": null
@@ -26,29 +25,25 @@
     ]
   },
   "services": [
-    {
-      "key": "takeaway",
-      "label": { "pt": "Takeaway", "en": "Takeaway" }
-    },
-    {
-      "key": "esplanada",
-      "label": { "pt": "Esplanada", "en": "Outdoor seating" }
-    },
-    {
-      "key": "parking",
-      "label": { "pt": "Estacionamento gratuito", "en": "Free parking" }
-    },
-    {
-      "key": "accessibility",
-      "label": { "pt": "Acessível a cadeira de rodas", "en": "Wheelchair accessible" }
-    },
-    {
-      "key": "catering",
-      "label": { "pt": "Catering disponível", "en": "Catering available" }
-    }
+    { "key": "takeaway", "label": { "pt": "Takeaway", "en": "Takeaway" } },
+    { "key": "esplanada", "label": { "pt": "Esplanada", "en": "Outdoor seating" } },
+    { "key": "parking", "label": { "pt": "Estacionamento gratuito", "en": "Free parking" } },
+    { "key": "accessibility", "label": { "pt": "Acessível a cadeira de rodas", "en": "Wheelchair accessible" } },
+    { "key": "catering", "label": { "pt": "Catering disponível", "en": "Catering available" } }
   ],
   "social": {
     "instagram": "https://www.instagram.com/cafeocortico/",
     "facebook": "https://www.facebook.com/profile.php?id=100063552132251"
+  },
+  "seo": {
+    "title": {
+      "pt": "Café O Cortiço | Torres Novas",
+      "en": "Café O Cortiço | Torres Novas"
+    },
+    "description": {
+      "pt": "Snack-bar com esplanada, takeaway, estacionamento gratuito e opções para toda a família.",
+      "en": "Snack bar with outdoor seating, takeaway, free parking, and family-friendly options."
+    },
+    "ogImage": "/og.jpg"
   }
 }

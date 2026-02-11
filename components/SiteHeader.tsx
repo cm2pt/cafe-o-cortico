@@ -1,7 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
 import Container from "@/components/Container";
-import CtaButtons from "@/components/CtaButtons";
+import { mapsDirectionsUrl } from "@/lib/data";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { site } from "@/lib/data";
 import type { Lang } from "@/lib/i18n";
@@ -16,22 +15,9 @@ export default function SiteHeader({ lang }: SiteHeaderProps) {
     <header className="sticky top-0 z-40 border-b border-[#e4d8cc] bg-[#fbf7f2]/95 backdrop-blur">
       <Container className="flex items-center justify-between py-4">
         <Link href="/" className="flex items-center gap-3">
-          {site.logo ? (
-            <div className="flex h-10 w-10 items-center justify-center overflow-hidden rounded-full border border-[#e2d5c9] bg-white">
-              <Image
-                src={site.logo}
-                alt={site.name}
-                width={40}
-                height={40}
-                className="h-full w-full object-contain"
-                priority
-              />
-            </div>
-          ) : (
-            <div className="flex h-10 w-10 items-center justify-center rounded-full border border-[#e2d5c9] bg-white text-sm font-semibold">
-              CO
-            </div>
-          )}
+          <div className="flex h-10 w-10 items-center justify-center rounded-full border border-[#e2d5c9] bg-white text-sm font-semibold">
+            CO
+          </div>
           <div>
             <span className="block text-lg font-semibold tracking-tight text-[#2d1d14]">
               {site.name}
@@ -55,12 +41,16 @@ export default function SiteHeader({ lang }: SiteHeaderProps) {
             {t(ui.nav.contact, lang)}
           </Link>
         </nav>
-        <div className="hidden items-center gap-3 md:flex">
+        <div className="flex items-center gap-3">
           <LanguageSwitcher lang={lang} />
-          <CtaButtons size="sm" lang={lang} />
-        </div>
-        <div className="md:hidden">
-          <LanguageSwitcher lang={lang} />
+          <Link
+            href={mapsDirectionsUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="hidden rounded-full bg-[#c99a7a] px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#2d1d14] transition hover:bg-[#b48769] md:inline-flex"
+          >
+            {t(ui.cta.directions, lang)}
+          </Link>
         </div>
       </Container>
     </header>

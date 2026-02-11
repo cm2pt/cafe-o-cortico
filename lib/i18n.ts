@@ -30,11 +30,11 @@ export const ui = {
     instagram: { pt: "Instagram", en: "Instagram" }
   },
   labels: {
-    heroTitle: {
+    heroHeadline: {
       pt: "Café O Cortiço, Torres Novas",
       en: "Café O Cortiço, Torres Novas"
     },
-    heroSubtitle: {
+    heroSubheadline: {
       pt: "Snack-bar com esplanada, takeaway e estacionamento gratuito.",
       en: "Snack bar with outdoor seating, takeaway, and free parking."
     },
@@ -96,19 +96,16 @@ export const ui = {
       pt: "Veja o dia a dia do café nas redes sociais.",
       en: "See daily moments from the café on social media."
     },
+    latestSocial: { pt: "Atualizações", en: "Updates" },
+    promoTitle: { pt: "Hoje / Esta semana", en: "Today / This week" },
+    trustChipsLabel: { pt: "Serviços-chave", en: "Key services" },
+    mapTap: { pt: "Toque para abrir no Maps", en: "Tap to open in Maps" },
     galleryTitle: { pt: "Momentos do café", en: "Café moments" },
     gallerySubtitle: {
       pt: "Fotografias reais do espaço e do dia a dia.",
       en: "Real photos from the café and everyday moments."
     },
-    latestSocial: {
-      pt: "Atualizações",
-      en: "Updates"
-    },
-    openPage: {
-      pt: "Abrir página",
-      en: "Open page"
-    }
+    openPage: { pt: "Abrir página", en: "Open page" }
   },
   days: {
     Monday: { pt: "Segunda-feira", en: "Monday" },

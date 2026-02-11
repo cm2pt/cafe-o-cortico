@@ -30,26 +30,33 @@ export default async function GalleryPage() {
         </div>
       </Container>
 
-      <div className="mt-10">
-        <div className="flex snap-x snap-mandatory gap-6 overflow-x-auto px-6 pb-6 pt-4">
-          {gallery.images.map((image, index) => (
-            <figure
-              key={image.src}
-              className="min-w-[260px] flex-1 snap-start overflow-hidden rounded-3xl border border-[#e4d8cc] bg-white/90 shadow-sm md:min-w-[360px]"
-            >
-              <div className="relative h-72 w-full bg-[#f2e8de]">
-                <Image
-                  src={image.src}
-                  alt={t(image.alt, lang)}
-                  fill
-                  className="object-cover"
-                  priority={index < 2}
-                />
-              </div>
-            </figure>
-          ))}
-        </div>
-      </div>
+      <section className="mt-10">
+        <Container>
+          <div className="columns-1 gap-6 sm:columns-2 lg:columns-3">
+            {gallery.images.map((image) => (
+              <figure
+                key={image.src}
+                className="mb-6 break-inside-avoid overflow-hidden rounded-3xl border border-[#e4d8cc] bg-white/90"
+              >
+                <div className="relative w-full">
+                  <Image
+                    src={image.src}
+                    alt={t(image.alt, lang)}
+                    width={900}
+                    height={700}
+                    className="h-auto w-full object-cover"
+                  />
+                </div>
+                {image.caption ? (
+                  <figcaption className="px-4 py-3 text-xs text-[#8b7768]">
+                    {t(image.caption, lang)}
+                  </figcaption>
+                ) : null}
+              </figure>
+            ))}
+          </div>
+        </Container>
+      </section>
 
       <Container>
         <div className="mt-10">

@@ -15,7 +15,7 @@ export default function SiteFooter({ lang }: SiteFooterProps) {
         <div>
           <p className="text-xl font-semibold text-[#2d1d14]">{site.name}</p>
           <p className="mt-2 text-sm text-[#6f5a4d]">
-            {t(ui.labels.heroSubtitle, lang)}
+            {t(ui.labels.heroSubheadline, lang)}
           </p>
           <div className="mt-4 flex items-center gap-3 text-sm font-semibold text-[#6f5a4d]">
             <Link href={site.social.instagram} target="_blank" rel="noreferrer">

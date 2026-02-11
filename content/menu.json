@@ -6,15 +6,6 @@
       "en": "From coffee to quick meals, with vegetarian options and sweet treats."
     }
   },
-  "dailySpecial": {
-    "enabled": false,
-    "name": { "pt": "Prato do dia", "en": "Dish of the day" },
-    "description": {
-      "pt": "Pergunte-nos pela sugestão de hoje.",
-      "en": "Ask us about today’s special."
-    },
-    "price": { "pt": "Sob consulta", "en": "Ask at counter" }
-  },
   "categories": [
     {
       "title": { "pt": "Café & Bebidas", "en": "Coffee & Drinks" },
@@ -49,7 +40,7 @@
             "en": "Classic options for the end of the day."
           },
           "price": { "pt": "Sob consulta", "en": "Ask at counter" },
-          "tags": []
+          "tags": [{ "pt": "seasonal", "en": "seasonal" }]
         }
       ]
     },
@@ -105,7 +96,10 @@
             "en": "Beef, chicken, or vegetarian options."
           },
           "price": { "pt": "Sob consulta", "en": "Ask at counter" },
-          "tags": [{ "pt": "best-seller", "en": "best-seller" }]
+          "tags": [
+            { "pt": "best-seller", "en": "best-seller" },
+            { "pt": "veg", "en": "veg" }
+          ]
         },
         {
           "name": { "pt": "Tostas", "en": "Toasts" },
@@ -114,7 +108,7 @@
             "en": "Perfect for a quick lunch."
           },
           "price": { "pt": "Sob consulta", "en": "Ask at counter" },
-          "tags": []
+          "tags": [{ "pt": "veg", "en": "veg" }]
         },
         {
           "name": { "pt": "Sopas", "en": "Soups" },
@@ -129,8 +123,8 @@
     }
   ],
   "allergenNote": {
-    "pt": "Se tiver alergias alimentares, fale connosco antes de pedir.",
-    "en": "If you have food allergies, please let us know before ordering."
+    "pt": "Se tiver alergias alimentares, informe-nos antes de pedir.",
+    "en": "If you have food allergies, please tell us before ordering."
   },
   "vegetarianNote": {
     "pt": "Pergunte-nos pelas opções vegetarianas.",

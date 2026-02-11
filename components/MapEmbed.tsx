@@ -37,6 +37,9 @@ export default function MapEmbed({ lang }: MapEmbedProps) {
         >
           {t(ui.cta.directions, lang)}
         </Link>
+        <span className="text-xs text-[#8b7768]">
+          {t(ui.labels.mapTap, lang)}
+        </span>
       </div>
     </div>
   );

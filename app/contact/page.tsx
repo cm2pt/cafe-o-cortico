@@ -56,6 +56,20 @@ export default async function ContactPage() {
               <p className="text-sm font-semibold text-[#2d1d14]">Telefone</p>
               <p className="mt-2 text-sm text-[#6f5a4d]">{site.phone}</p>
             </div>
+            <div className="rounded-2xl border border-[#e4d8cc] bg-white/90 p-5">
+              <p className="text-sm font-semibold text-[#2d1d14]">Redes sociais</p>
+              <div className="mt-3 flex flex-wrap gap-3 text-xs font-semibold uppercase tracking-[0.2em] text-[#8b7768]">
+                <a href={site.social.instagram} target="_blank" rel="noreferrer">
+                  Instagram
+                </a>
+                <a href={site.social.facebook} target="_blank" rel="noreferrer">
+                  Facebook
+                </a>
+                <a href={site.googleMapsUrl} target="_blank" rel="noreferrer">
+                  Google Maps
+                </a>
+              </div>
+            </div>
           </div>
         </div>
 

@@ -8,7 +8,6 @@ export type HoursEntry = {
 
 export type SiteData = {
   name: string;
-  logo?: string;
   phone: string;
   address: {
     line1: string;
@@ -16,7 +15,7 @@ export type SiteData = {
     line3: string;
     postalCode: string;
   };
-  googleMapsPlaceUrl: string;
+  googleMapsUrl: string;
   coordinates: {
     lat: number | null;
     lng: number | null;
@@ -32,6 +31,11 @@ export type SiteData = {
   social: {
     instagram: string;
     facebook: string;
+  };
+  seo: {
+    title: LocalizedString;
+    description: LocalizedString;
+    ogImage: string;
   };
 };
 
@@ -55,20 +59,29 @@ export type MenuData = {
     title: LocalizedString;
     subtitle: LocalizedString;
   };
-  dailySpecial: {
-    enabled: boolean;
-    name: LocalizedString;
-    description: LocalizedString;
-    price: LocalizedString;
-  };
   categories: MenuCategory[];
   allergenNote: LocalizedString;
   vegetarianNote: LocalizedString;
 };
 
+export type PromoStripItem = {
+  title: LocalizedString;
+  text: LocalizedString;
+};
+
+export type PromosData = {
+  promoStrip: PromoStripItem[];
+  dailySpecial: {
+    enabled: boolean;
+    title: LocalizedString;
+    description: LocalizedString;
+  };
+};
+
 export type GalleryImage = {
   src: string;
   alt: LocalizedString;
+  caption?: LocalizedString;
   credit?: string;
 };
 
@@ -78,6 +91,8 @@ export type GalleryData = {
 
 export type TestimonialItem = {
   quote: LocalizedString;
+  sourceLabel: string;
+  sourceUrl: string;
 };
 
 export type TestimonialsData = {

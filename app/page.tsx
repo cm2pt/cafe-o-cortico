@@ -3,7 +3,6 @@ import type { Metadata } from "next";
 import { cookies } from "next/headers";
 import Container from "@/components/Container";
 import CtaButtons from "@/components/CtaButtons";
-import HoursBlock from "@/components/HoursBlock";
 import MapEmbed from "@/components/MapEmbed";
 import SocialProof from "@/components/SocialProof";
 import MobileStickyBar from "@/components/MobileStickyBar";
@@ -11,13 +10,16 @@ import BestSellers from "@/components/BestSellers";
 import ServicesGrid from "@/components/ServicesGrid";
 import CateringCallout from "@/components/CateringCallout";
 import InstagramPreview from "@/components/InstagramPreview";
+import PromoStrip from "@/components/PromoStrip";
+import TrustChips from "@/components/TrustChips";
+import OpenStatus from "@/components/OpenStatus";
 import { site } from "@/lib/data";
 import { buildLocalBusinessSchema } from "@/lib/structuredData";
 import { resolveLang, t, ui } from "@/lib/i18n";
 
 export const metadata: Metadata = {
   title: "Café O Cortiço | Torres Novas",
-  description: "Café com esplanada, takeaway e estacionamento gratuito em Torres Novas."
+  description: "Snack-bar com esplanada, takeaway e estacionamento gratuito em Torres Novas."
 };
 
 export default async function Home() {
@@ -36,16 +38,17 @@ export default async function Home() {
         <Container className="grid gap-10 py-12 md:grid-cols-[1.05fr_0.95fr] md:items-center">
           <div className="space-y-6">
             <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#8b7768]">
-              {t(ui.labels.heroTitle, lang)}
+              {t(ui.labels.heroHeadline, lang)}
             </p>
             <h1 className="text-4xl font-semibold leading-tight text-[#2d1d14] md:text-5xl">
-              {t(ui.labels.heroSubtitle, lang)}
+              {t(ui.labels.heroSubheadline, lang)}
             </h1>
             <p className="text-base text-[#6f5a4d] md:text-lg">
               {site.address.line1}, {site.address.postalCode} {site.address.line2}
             </p>
             <CtaButtons lang={lang} />
-            <HoursBlock lang={lang} showCloseTime />
+            <OpenStatus lang={lang} />
+            <TrustChips lang={lang} />
           </div>
           <div className="relative">
             <div className="absolute -left-6 -top-6 h-24 w-24 rounded-full bg-[#e6d4c5] blur-2xl" />
@@ -63,7 +66,13 @@ export default async function Home() {
         </Container>
       </section>
 
-      <section className="py-16">
+      <section className="py-12">
+        <Container>
+          <PromoStrip lang={lang} />
+        </Container>
+      </section>
+
+      <section className="py-12">
         <Container className="grid gap-8">
           <BestSellers lang={lang} />
           <ServicesGrid lang={lang} />

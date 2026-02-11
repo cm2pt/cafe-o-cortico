@@ -4,19 +4,25 @@
       "quote": {
         "pt": "Atendimento simpático e ambiente tranquilo.",
         "en": "Friendly service and a calm atmosphere."
-      }
+      },
+      "sourceLabel": "Facebook",
+      "sourceUrl": "https://www.facebook.com/profile.php?id=100063552132251"
     },
     {
       "quote": {
         "pt": "Boa relação qualidade-preço e opções para toda a família.",
         "en": "Good value and options for the whole family."
-      }
+      },
+      "sourceLabel": "Google Maps",
+      "sourceUrl": "https://share.google/V2SerdI6eGsBFIEXV"
     },
     {
       "quote": {
         "pt": "Espaço acolhedor para uma pausa rápida.",
         "en": "A welcoming space for a quick break."
-      }
+      },
+      "sourceLabel": "Instagram",
+      "sourceUrl": "https://www.instagram.com/cafeocortico/"
     }
   ]
 }

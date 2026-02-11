@@ -2,17 +2,20 @@ import siteJson from "@/content/site.json";
 import menuJson from "@/content/menu.json";
 import galleryJson from "@/content/gallery.json";
 import testimonialsJson from "@/content/testimonials.json";
+import promosJson from "@/content/promos.json";
 import type {
   SiteData,
   MenuData,
   GalleryData,
-  TestimonialsData
+  TestimonialsData,
+  PromosData
 } from "@/lib/types";
 
 export const site = siteJson as SiteData;
 export const menu = menuJson as MenuData;
 export const gallery = galleryJson as GalleryData;
 export const testimonials = testimonialsJson as TestimonialsData;
+export const promos = promosJson as PromosData;
 
 const addressQuery = encodeURIComponent(
   `${site.address.line1}, ${site.address.postalCode} ${site.address.line2}, ${site.address.line3}`

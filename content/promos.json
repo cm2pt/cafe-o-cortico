@@ -1,0 +1,26 @@
+{
+  "promoStrip": [
+    {
+      "title": { "pt": "Hoje", "en": "Today" },
+      "text": {
+        "pt": "Crepes, panquecas e café sempre prontos.",
+        "en": "Crepes, pancakes, and coffee ready all day."
+      }
+    },
+    {
+      "title": { "pt": "Esta semana", "en": "This week" },
+      "text": {
+        "pt": "Pergunte pelas sugestões de snacks e bebidas frescas.",
+        "en": "Ask about snack and refreshing drink suggestions."
+      }
+    }
+  ],
+  "dailySpecial": {
+    "enabled": true,
+    "title": { "pt": "Prato do dia", "en": "Dish of the day" },
+    "description": {
+      "pt": "Fale connosco para a sugestão de hoje.",
+      "en": "Talk to us about today’s suggestion."
+    }
+  }
+}
