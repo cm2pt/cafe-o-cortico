@@ -1,0 +1,23 @@
+{
+  "strip": {
+    "title": "New in the display",
+    "description": "Ask about today’s pastry and the barista’s favorite pairing."
+  },
+  "promos": [
+    {
+      "title": "Work-from-café mornings",
+      "description": "Quiet seats, steady coffee, and friendly service.",
+      "cta": "Drop by early"
+    },
+    {
+      "title": "Afternoon pick-me-up",
+      "description": "Espresso, a warm snack, and a calm table.",
+      "cta": "Bring a friend"
+    },
+    {
+      "title": "Weekend slow-down",
+      "description": "A relaxed stop for coffee and conversation.",
+      "cta": "Stay a while"
+    }
+  ]
+}

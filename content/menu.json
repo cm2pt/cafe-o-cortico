@@ -1,0 +1,84 @@
+{
+  "featured": [
+    {
+      "name": "House Espresso",
+      "description": "Balanced and aromatic with a clean finish.",
+      "priceNote": "Ask at the counter",
+      "image": "/menu-espresso.svg"
+    },
+    {
+      "name": "Morning Pastry",
+      "description": "Daily-baked pastry with a soft, buttery crumb.",
+      "priceNote": "Ask at the counter",
+      "image": "/menu-pastry.svg"
+    },
+    {
+      "name": "Toasted Sandwich",
+      "description": "Crisp, warm, and layered with fresh ingredients.",
+      "priceNote": "Ask at the counter",
+      "image": "/menu-sandwich.svg"
+    }
+  ],
+  "categories": [
+    {
+      "title": "Coffee & Drinks",
+      "items": [
+        {
+          "name": "Espresso",
+          "description": "Short and intense with a rich crema.",
+          "priceNote": "Ask at the counter"
+        },
+        {
+          "name": "Milk Coffee",
+          "description": "Smooth, creamy, and comforting.",
+          "priceNote": "Ask at the counter"
+        },
+        {
+          "name": "Tea Selection",
+          "description": "Seasonal blends served hot.",
+          "priceNote": "Ask at the counter"
+        }
+      ]
+    },
+    {
+      "title": "Pastries & Sweets",
+      "items": [
+        {
+          "name": "Daily Pastry",
+          "description": "Baked fresh each morning.",
+          "priceNote": "Ask at the counter"
+        },
+        {
+          "name": "Cake Slice",
+          "description": "Rotating flavors and textures.",
+          "priceNote": "Ask at the counter"
+        },
+        {
+          "name": "Seasonal Treat",
+          "description": "Small-batch and made in-house.",
+          "priceNote": "Ask at the counter"
+        }
+      ]
+    },
+    {
+      "title": "Toasts & Light Bites",
+      "items": [
+        {
+          "name": "Classic Toast",
+          "description": "Crisp bread with simple toppings.",
+          "priceNote": "Ask at the counter"
+        },
+        {
+          "name": "Warm Sandwich",
+          "description": "Golden, melty, and satisfying.",
+          "priceNote": "Ask at the counter"
+        },
+        {
+          "name": "Soup of the Day",
+          "description": "Homestyle, served warm.",
+          "priceNote": "Ask at the counter"
+        }
+      ]
+    }
+  ]
+}
