@@ -9,22 +9,22 @@ type SocialProofProps = {
 
 export default function SocialProof({ lang }: SocialProofProps) {
   return (
-    <div className="rounded-3xl border border-[#e4d8cc] bg-white/90 p-6">
-      <h3 className="text-lg font-semibold text-[#2d1d14]">
+    <div className="rounded-3xl border border-[var(--line)] bg-white/90 p-6">
+      <h3 className="text-lg font-semibold text-[var(--accent)]">
         {t(ui.labels.socialProofTitle, lang)}
       </h3>
-      <p className="mt-2 text-sm text-[#6f5a4d]">
+      <p className="mt-2 text-sm text-[var(--muted)]">
         {t(ui.labels.socialProofCopy, lang)}
       </p>
-      <div className="mt-4 grid gap-4 text-sm text-[#6f5a4d]">
+      <div className="mt-4 grid gap-4 text-sm text-[var(--muted)]">
         {testimonials.items.map((item) => (
-          <div key={t(item.quote, lang)} className="rounded-2xl border border-[#efe2d5] bg-white p-4">
+          <div key={t(item.quote, lang)} className="rounded-2xl border border-[var(--line)] bg-white p-4">
             <p>“{t(item.quote, lang)}”</p>
             <Link
               href={item.sourceUrl}
               target="_blank"
               rel="noreferrer"
-              className="mt-3 inline-flex text-xs font-semibold uppercase tracking-[0.2em] text-[#8b7768]"
+              className="mt-3 inline-flex text-xs font-semibold uppercase tracking-[0.2em] text-[var(--primary)]"
             >
               {item.sourceLabel}
             </Link>

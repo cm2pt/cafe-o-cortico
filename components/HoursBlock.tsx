@@ -13,9 +13,9 @@ export default function HoursBlock({ lang, showCloseTime = false }: HoursBlockPr
   const status = getOpenStatus(weekSchedule, timezone, lang);
 
   return (
-    <div className="rounded-3xl border border-[#e4d8cc] bg-white/90 p-6">
+    <div className="rounded-3xl border border-[var(--line)] bg-white/90 p-6">
       <div className="flex items-center justify-between">
-        <h3 className="text-lg font-semibold text-[#2d1d14]">
+        <h3 className="text-lg font-semibold text-[var(--accent)]">
           {t(ui.labels.openNow, lang)}
         </h3>
         <span
@@ -24,25 +24,25 @@ export default function HoursBlock({ lang, showCloseTime = false }: HoursBlockPr
               ? "bg-[#dfe9d7] text-[#2c4a1f]"
               : status.isOpen === false
               ? "bg-[#f5e3dd] text-[#7f3d2b]"
-              : "bg-[#efe2d5] text-[#6f5a4d]"
+              : "bg-[var(--line)] text-[var(--muted)]"
           }`}
         >
           {status.label}
         </span>
       </div>
       {showCloseTime && status.isOpen !== null ? (
-        <p className="mt-2 text-sm text-[#6f5a4d]">
+        <p className="mt-2 text-sm text-[var(--muted)]">
           {t(ui.labels.closesAt, lang)} {status.closesAt}
         </p>
       ) : null}
-      <div className="mt-4 grid gap-3 text-sm text-[#6f5a4d]">
+      <div className="mt-4 grid gap-3 text-sm text-[var(--muted)]">
         {weekSchedule.map((entry) => (
           <div
             key={entry.day}
-            className="flex items-center justify-between border-b border-[#efe2d5] pb-2 last:border-b-0"
+            className="flex items-center justify-between border-b border-[var(--line)] pb-2 last:border-b-0"
           >
             <span>{t(ui.days[entry.day as keyof typeof ui.days] ?? entry.day, lang)}</span>
-            <span className="font-semibold text-[#2d1d14]">
+            <span className="font-semibold text-[var(--accent)]">
               {formatHours(entry)}
             </span>
           </div>

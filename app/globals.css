@@ -2,11 +2,14 @@
 
 :root {
   color-scheme: light;
-  --background: #f7f1ea;
-  --foreground: #2d1d14;
-  --accent: #c99a7a;
-  --accent-strong: #b48769;
-  --muted: #6f5a4d;
+  --background: #f5e9d4;
+  --foreground: #2e2e2e;
+  --primary: #7a4f35;
+  --secondary: #f5e9d4;
+  --accent: #2e2e2e;
+  --accent-strong: #1f1f1f;
+  --muted: #6b5a4f;
+  --line: #d8c7b1;
 }
 
 @theme inline {
@@ -15,7 +18,7 @@
 }
 
 body {
-  background: #f7f1ea;
+  background: var(--secondary);
   color: var(--foreground);
   font-family: "Avenir Next", "Segoe UI", "Trebuchet MS", sans-serif;
   min-height: 100vh;

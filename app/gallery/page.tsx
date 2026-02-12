@@ -18,13 +18,13 @@ export default async function GalleryPage() {
     <main className="pb-20 pt-12">
       <Container>
         <div className="max-w-2xl">
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#8b7768]">
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[var(--primary)]">
             {t(ui.nav.gallery, lang)}
           </p>
-          <h1 className="mt-4 text-4xl font-semibold text-[#2d1d14]">
+          <h1 className="mt-4 text-4xl font-semibold text-[var(--accent)]">
             {t(ui.labels.galleryTitle, lang)}
           </h1>
-          <p className="mt-4 text-base text-[#6f5a4d]">
+          <p className="mt-4 text-base text-[var(--muted)]">
             {t(ui.labels.gallerySubtitle, lang)}
           </p>
         </div>
@@ -36,7 +36,7 @@ export default async function GalleryPage() {
             {gallery.images.map((image) => (
               <figure
                 key={image.src}
-                className="mb-6 break-inside-avoid overflow-hidden rounded-3xl border border-[#e4d8cc] bg-white/90"
+                className="mb-6 break-inside-avoid overflow-hidden rounded-3xl border border-[var(--line)] bg-white/90"
               >
                 <div className="relative w-full">
                   <Image
@@ -48,7 +48,7 @@ export default async function GalleryPage() {
                   />
                 </div>
                 {image.caption ? (
-                  <figcaption className="px-4 py-3 text-xs text-[#8b7768]">
+                  <figcaption className="px-4 py-3 text-xs text-[var(--primary)]">
                     {t(image.caption, lang)}
                   </figcaption>
                 ) : null}

@@ -42,6 +42,8 @@ export const ui = {
     closedNow: { pt: "Fechado agora", en: "Closed now" },
     hoursUnavailable: { pt: "Horário indisponível", en: "Hours unavailable" },
     closesAt: { pt: "Fecha às", en: "Closes at" },
+    opensAt: { pt: "Abre às", en: "Opens at" },
+    opensOnAt: { pt: "Abre", en: "Opens" },
     bestSellers: { pt: "Mais pedidos", en: "Best sellers" },
     bestSellersCopy: {
       pt: "Crepes, panquecas, café e hambúrgueres.",

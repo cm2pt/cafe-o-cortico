@@ -1,5 +1,6 @@
 import Image from "next/image";
 import type { MenuCategory as MenuCategoryType } from "@/lib/types";
+import { site } from "@/lib/data";
 import type { Lang } from "@/lib/i18n";
 import { t } from "@/lib/i18n";
 
@@ -10,20 +11,29 @@ type MenuCategoryProps = {
 
 export default function MenuCategory({ category, lang }: MenuCategoryProps) {
   return (
-    <section className="rounded-3xl border border-[#e4d8cc] bg-white/90 p-6">
+    <section className="rounded-3xl border border-[var(--line)] bg-white/90 p-6">
       <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
         <div>
-          <h2 className="text-2xl font-semibold text-[#2d1d14]">
+          {site.logo ? (
+            <Image
+              src={site.logo}
+              alt="Logo Café O Cortiço – bee and honeycomb"
+              width={96}
+              height={40}
+              className="mb-2 h-8 w-auto object-contain opacity-70"
+            />
+          ) : null}
+          <h2 className="text-2xl font-semibold text-[var(--accent)]">
             {t(category.title, lang)}
           </h2>
           {category.description ? (
-            <p className="mt-2 text-sm text-[#6f5a4d]">
+            <p className="mt-2 text-sm text-[var(--muted)]">
               {t(category.description, lang)}
             </p>
           ) : null}
         </div>
         {category.image ? (
-          <div className="h-20 w-full overflow-hidden rounded-2xl border border-[#e4d8cc] bg-white md:w-40">
+          <div className="h-20 w-full overflow-hidden rounded-2xl border border-[var(--line)] bg-white md:w-40">
             <Image
               src={category.image}
               alt={t(category.title, lang)}
@@ -38,11 +48,11 @@ export default function MenuCategory({ category, lang }: MenuCategoryProps) {
         {category.items.map((item) => (
           <div
             key={t(item.name, lang)}
-            className="rounded-2xl border border-[#efe2d5] bg-white px-4 py-4"
+            className="rounded-2xl border border-[var(--line)] bg-white px-4 py-4"
           >
             <div className="flex items-start justify-between gap-3">
               {item.image ? (
-                <div className="hidden h-16 w-16 shrink-0 overflow-hidden rounded-xl border border-[#efe2d5] sm:block">
+                <div className="hidden h-16 w-16 shrink-0 overflow-hidden rounded-xl border border-[var(--line)] sm:block">
                   <Image
                     src={item.image}
                     alt={t(item.name, lang)}
@@ -53,10 +63,10 @@ export default function MenuCategory({ category, lang }: MenuCategoryProps) {
                 </div>
               ) : null}
               <div>
-                <h3 className="text-base font-semibold text-[#2d1d14]">
+                <h3 className="text-base font-semibold text-[var(--accent)]">
                   {t(item.name, lang)}
                 </h3>
-                <p className="mt-2 text-sm text-[#6f5a4d]">
+                <p className="mt-2 text-sm text-[var(--muted)]">
                   {t(item.description, lang)}
                 </p>
                 {item.tags && item.tags.length > 0 ? (
@@ -64,7 +74,7 @@ export default function MenuCategory({ category, lang }: MenuCategoryProps) {
                     {item.tags.map((tag) => (
                       <span
                         key={t(tag, lang)}
-                        className="rounded-full bg-[#f0e1d3] px-2 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-[#2d1d14]"
+                        className="rounded-full bg-[var(--secondary)] px-2 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-[var(--accent)]"
                       >
                         {t(tag, lang)}
                       </span>
@@ -72,7 +82,7 @@ export default function MenuCategory({ category, lang }: MenuCategoryProps) {
                   </div>
                 ) : null}
               </div>
-              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#8b7768]">
+              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--primary)]">
                 {t(item.price, lang)}
               </span>
             </div>

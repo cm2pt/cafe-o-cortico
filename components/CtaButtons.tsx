@@ -24,21 +24,21 @@ export default function CtaButtons({
         href={mapsDirectionsUrl}
         target="_blank"
         rel="noreferrer"
-        className={`rounded-full bg-[#c99a7a] ${buttonPadding} text-sm font-semibold text-[#2d1d14] shadow-md shadow-black/10 transition hover:bg-[#b48769]`}
+        className={`rounded-full bg-[var(--primary)] ${buttonPadding} text-sm font-semibold text-[var(--secondary)] shadow-md shadow-black/10 transition hover:bg-[var(--accent)]`}
       >
         {t(ui.cta.directions, lang)}
       </Link>
       {hasPhone ? (
         <Link
           href={`tel:${site.phone.replace(/\s+/g, "")}`}
-          className={`rounded-full border border-[#d8c8bb] ${buttonPadding} text-sm font-semibold text-[#2d1d14] transition hover:border-transparent hover:bg-[#efe2d5]`}
+          className={`rounded-full border border-[var(--line)] ${buttonPadding} text-sm font-semibold text-[var(--accent)] transition hover:border-[var(--primary)] hover:bg-[var(--secondary)]`}
         >
           {t(ui.cta.call, lang)}
         </Link>
       ) : (
         <button
           type="button"
-          className={`cursor-not-allowed rounded-full border border-[#e2d5c9] ${buttonPadding} text-sm font-semibold text-[#9b8a7c]`}
+          className={`cursor-not-allowed rounded-full border border-[var(--line)] ${buttonPadding} text-sm font-semibold text-[#9b8a7c]`}
           aria-disabled
         >
           {t(ui.cta.call, lang)}

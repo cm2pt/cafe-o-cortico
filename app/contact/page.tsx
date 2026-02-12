@@ -27,13 +27,13 @@ export default async function ContactPage() {
       />
       <Container className="grid gap-12 md:grid-cols-[1.05fr_0.95fr]">
         <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#8b7768]">
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[var(--primary)]">
             {t(ui.nav.contact, lang)}
           </p>
-          <h1 className="mt-4 text-4xl font-semibold text-[#2d1d14]">
+          <h1 className="mt-4 text-4xl font-semibold text-[var(--accent)]">
             {t(ui.labels.locationTitle, lang)}
           </h1>
-          <p className="mt-4 text-base text-[#6f5a4d]">
+          <p className="mt-4 text-base text-[var(--muted)]">
             {site.address.line1}, {site.address.postalCode} {site.address.line2}
           </p>
 
@@ -42,23 +42,23 @@ export default async function ContactPage() {
           </div>
 
           <div className="mt-10 grid gap-4">
-            <div className="rounded-2xl border border-[#e4d8cc] bg-white/90 p-5">
-              <p className="text-sm font-semibold text-[#2d1d14]">
+            <div className="rounded-2xl border border-[var(--line)] bg-white/90 p-5">
+              <p className="text-sm font-semibold text-[var(--accent)]">
                 {t(ui.labels.servicesTitle, lang)}
               </p>
-              <ul className="mt-2 grid gap-1 text-sm text-[#6f5a4d]">
+              <ul className="mt-2 grid gap-1 text-sm text-[var(--muted)]">
                 {site.services.map((service) => (
                   <li key={service.key}>{t(service.label, lang)}</li>
                 ))}
               </ul>
             </div>
-            <div className="rounded-2xl border border-[#e4d8cc] bg-white/90 p-5">
-              <p className="text-sm font-semibold text-[#2d1d14]">Telefone</p>
-              <p className="mt-2 text-sm text-[#6f5a4d]">{site.phone}</p>
+            <div className="rounded-2xl border border-[var(--line)] bg-white/90 p-5">
+              <p className="text-sm font-semibold text-[var(--accent)]">Telefone</p>
+              <p className="mt-2 text-sm text-[var(--muted)]">{site.phone}</p>
             </div>
-            <div className="rounded-2xl border border-[#e4d8cc] bg-white/90 p-5">
-              <p className="text-sm font-semibold text-[#2d1d14]">Redes sociais</p>
-              <div className="mt-3 flex flex-wrap gap-3 text-xs font-semibold uppercase tracking-[0.2em] text-[#8b7768]">
+            <div className="rounded-2xl border border-[var(--line)] bg-white/90 p-5">
+              <p className="text-sm font-semibold text-[var(--accent)]">Redes sociais</p>
+              <div className="mt-3 flex flex-wrap gap-3 text-xs font-semibold uppercase tracking-[0.2em] text-[var(--primary)]">
                 <a href={site.social.instagram} target="_blank" rel="noreferrer">
                   Instagram
                 </a>

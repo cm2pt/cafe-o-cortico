@@ -20,17 +20,17 @@ export default async function MenuPage() {
       <Container>
         <div className="grid gap-10 md:grid-cols-[1.1fr_0.9fr] md:items-center">
           <div className="max-w-2xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#8b7768]">
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[var(--primary)]">
               {t(ui.nav.menu, lang)}
             </p>
-            <h1 className="mt-4 text-4xl font-semibold text-[#2d1d14]">
+            <h1 className="mt-4 text-4xl font-semibold text-[var(--accent)]">
               {t(menu.hero.title, lang)}
             </h1>
-            <p className="mt-4 text-base text-[#6f5a4d]">
+            <p className="mt-4 text-base text-[var(--muted)]">
               {t(menu.hero.subtitle, lang)}
             </p>
           </div>
-          <div className="overflow-hidden rounded-3xl border border-[#e4d8cc] bg-white/90">
+          <div className="overflow-hidden rounded-3xl border border-[var(--line)] bg-white/90">
             <Image
               src="/menu/menu.jpg"
               alt={t(ui.labels.dailySpecial, lang)}
@@ -46,13 +46,13 @@ export default async function MenuPage() {
         </div>
 
         {promos.dailySpecial.enabled ? (
-          <div className="mt-10 rounded-3xl border border-[#e4d8cc] bg-[#f6ede4] p-6">
+          <div className="mt-10 rounded-3xl border border-[var(--line)] bg-[var(--secondary)] p-6">
             <div className="flex items-center justify-between">
-              <h2 className="text-2xl font-semibold text-[#2d1d14]">
+              <h2 className="text-2xl font-semibold text-[var(--accent)]">
                 {t(promos.dailySpecial.title, lang)}
               </h2>
             </div>
-            <p className="mt-3 text-sm text-[#6f5a4d]">
+            <p className="mt-3 text-sm text-[var(--muted)]">
               {t(promos.dailySpecial.description, lang)}
             </p>
           </div>
@@ -68,12 +68,12 @@ export default async function MenuPage() {
           ))}
         </div>
 
-        <div className="mt-10 grid gap-3 text-sm text-[#6f5a4d]">
+        <div className="mt-10 grid gap-3 text-sm text-[var(--muted)]">
           <p>{t(menu.allergenNote, lang)}</p>
-          <p className="font-semibold text-[#2d1d14]">
+          <p className="font-semibold text-[var(--accent)]">
             {t(menu.vegetarianNote, lang)}
           </p>
-          <p className="text-xs text-[#8b7768]">{t(menu.priceNote, lang)}</p>
+          <p className="text-xs text-[var(--primary)]">{t(menu.priceNote, lang)}</p>
         </div>
       </Container>
     </main>

@@ -66,10 +66,34 @@ export const getOpenStatus = (
 
   const isOpen = nowValue >= openMinutes && nowValue < closeValue;
 
+  let nextOpenDay: string | undefined;
+  let nextOpenAt: string | undefined;
+
+  if (!isOpen) {
+    if (minutes < openMinutes) {
+      nextOpenDay = today.day;
+      nextOpenAt = formatTime(openMinutes);
+    } else {
+      for (let offset = 1; offset <= weekSchedule.length; offset += 1) {
+        const idx = (todayIndex + offset) % weekSchedule.length;
+        const entry = weekSchedule[idx];
+        const entryOpenMinutes = parseTime(entry.open);
+        const entryCloseMinutes = parseTime(entry.close);
+        if (entryOpenMinutes !== null && entryCloseMinutes !== null) {
+          nextOpenDay = entry.day;
+          nextOpenAt = formatTime(entryOpenMinutes);
+          break;
+        }
+      }
+    }
+  }
+
   return {
     label: isOpen ? t(ui.labels.openNow, lang) : t(ui.labels.closedNow, lang),
     isOpen,
-    closesAt: formatTime(closeMinutes)
+    closesAt: formatTime(closeMinutes),
+    nextOpenDay,
+    nextOpenAt
   };
 };
 

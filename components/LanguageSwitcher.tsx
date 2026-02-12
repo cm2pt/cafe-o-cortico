@@ -24,7 +24,7 @@ export default function LanguageSwitcher({ lang }: LanguageSwitcherProps) {
     <button
       type="button"
       onClick={handleSwitch}
-      className="rounded-full border border-[#e2d5c9] px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-[#6f5a4d] transition hover:border-transparent hover:bg-[#efe2d5]"
+      className="rounded-full border border-[var(--line)] px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-[var(--muted)] transition hover:border-transparent hover:bg-[var(--line)]"
       aria-label={`Switch language to ${nextLang === "pt" ? "Português" : "English"}`}
     >
       {lang === "pt" ? "EN" : "PT"}
