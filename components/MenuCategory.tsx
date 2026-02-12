@@ -41,6 +41,17 @@ export default function MenuCategory({ category, lang }: MenuCategoryProps) {
             className="rounded-2xl border border-[#efe2d5] bg-white px-4 py-4"
           >
             <div className="flex items-start justify-between gap-3">
+              {item.image ? (
+                <div className="hidden h-16 w-16 shrink-0 overflow-hidden rounded-xl border border-[#efe2d5] sm:block">
+                  <Image
+                    src={item.image}
+                    alt={t(item.name, lang)}
+                    width={128}
+                    height={128}
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+              ) : null}
               <div>
                 <h3 className="text-base font-semibold text-[#2d1d14]">
                   {t(item.name, lang)}

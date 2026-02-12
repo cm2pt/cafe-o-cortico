@@ -14,7 +14,9 @@ const isBestSeller = (tags: { pt: string; en: string }[] | undefined) => {
 
 export default function BestSellers({ lang }: { lang: Lang }) {
   const items = menu.categories
-    .flatMap((category) => category.items.map((item) => ({ ...item, image: category.image })))
+    .flatMap((category) =>
+      category.items.map((item) => ({ ...item, image: item.image ?? category.image }))
+    )
     .filter((item) => isBestSeller(item.tags));
 
   return (
